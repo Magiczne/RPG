@@ -39,57 +39,74 @@ int Statistics::Gold::get() {
 
 #pragma region Setters
 
-void Statistics::HP::set(int hp) {
-	if (hp > 0 && hp <= Toughness * 5) {
+void Statistics::HP::set(int hp) 
+{
+	if (hp >= 0) 
+	{
 		this->_hp = hp;
 	}
 }
 
-void Statistics::Mana::set(int mana) {
-	if (mana > 0 && mana <= this->Intelligence * 5) {
+void Statistics::Mana::set(int mana) 
+{
+	if (mana >= 0) 
+	{
 		this->_mana = mana;
 	}
 }
 
-void Statistics::Intelligence::set(int intelligence) {
-	if (intelligence >= 0) {
+void Statistics::Intelligence::set(int intelligence) 
+{
+	if (intelligence >= 0) 
+	{
 		this->_intelligence = intelligence;
 	}
 }
 
-void Statistics::Agility::set(int agility) {
-	if (agility >= 0) {
+void Statistics::Agility::set(int agility) 
+{
+	if (agility >= 0)
+	{
 		this->_agility = agility;
 	}
 }
 
-void Statistics::Strength::set(int strength) {
-	if (strength >= 0) {
+void Statistics::Strength::set(int strength) 
+{
+	if (strength >= 0)
+	{
 		this->_strength = strength;
 	}
 }
 
-void Statistics::Toughness::set(int toughness) {
-	if (toughness >= 0) {
+void Statistics::Toughness::set(int toughness)
+{
+	if (toughness >= 0) 
+	{
 		this->_toughness = toughness;
 	}
 }
 
-void Statistics::Wisdom::set(int wisdom) {
-	if (wisdom >= 0) {
+void Statistics::Wisdom::set(int wisdom)
+{
+	if (wisdom >= 0) 
+	{
 		this->_wisdom = wisdom;
 	}
 }
 
-void Statistics::Gold::set(int gold) {
-	if (gold >= 0) {
+void Statistics::Gold::set(int gold)
+{
+	if (gold >= 0) 
+	{
 		this->_gold = gold;
 	}
 }
 
 #pragma endregion
 
-void Statistics::add(Statistics^ s) {
+void Statistics::add(Statistics^ s)
+{
 	this->HP += s->HP;
 	this->Mana += s->Mana;
 	this->Intelligence += s->Intelligence;
@@ -100,7 +117,8 @@ void Statistics::add(Statistics^ s) {
 	this->Gold += s->Gold;
 }
 
-void Statistics::substract(Statistics^ s) {
+void Statistics::substract(Statistics^ s)
+{
 	this->HP -= s->HP;
 	this->Mana -= s->Mana;
 	this->Intelligence -= s->Intelligence;

@@ -7,17 +7,27 @@ Character::Character()
 {
 	this->_statistics = gcnew Statistics();
 	this->_equipment = gcnew Equipment();
-	this->_description = gcnew String("Desc");
+	this->_description = gcnew String("Character");
 }
 
 int Character::getMaxHp()
 {
-	return this->_statistics->toughness() * 5;
+	return this->_statistics->Toughness * 5;
 }
 
 int Character::getMaxMana()
 {
-	return this->_statistics->intelligence() * 5;
+	return this->_statistics->Intelligence * 5;
+}
+
+void Character::baseMeleeAttack()
+{
+	
+}
+
+void Character::baseRangeAttack()
+{
+	
 }
 
 void Character::use(int index)

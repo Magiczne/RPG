@@ -12,51 +12,61 @@ private:
 	int _wisdom;
 	int _gold = 100;
 
+
+
 public:
-	property int HP {
+	#pragma region Properties
+
+	property int HP
+	{
 		int get();
 		private: void set(int hp);
 	}
 
-	property int Mana {
+	property int Mana
+	{
 		int get();
 		private: void set(int mana);
 	}
 
-	property int Intelligence {
+	property int Intelligence
+	{
 		int get();
 		private: void set(int intelligence);
 	}
 
-	property int Agility {
+	property int Agility
+	{
 		int get();
-		private: void set(int intelligence);
+		private: void set(int agility);
 	}
 
-	property int Strength {
+	property int Strength
+	{
 		int get();
-		private: void set(int intelligence);
+		private: void set(int strength);
 	}
 
-	property int Toughness {
+	property int Toughness
+	{
 		int get();
-		private: void set(int intelligence);
+		private: void set(int toughness);
 	}
 
-	property int Wisdom {
+	property int Wisdom
+	{
 		int get();
-		private: void set(int intelligence);
+		private: void set(int wisdom);
 	}
 
-	property int Gold {
+	property int Gold
+	{
 		int get();
-		private: void set(int intelligence);
+		private: void set(int gold);
 	}
 
+	#pragma endregion
 
 	void add(Statistics^ s);
 	void substract(Statistics^ s);
-
-private:
-
 };
