@@ -10,11 +10,11 @@ private:
 	int _strength;
 	int _toughness;
 	int _wisdom;
-	int _gold = 100;
-
-
+	int _gold;
 
 public:
+	Statistics(int hp, int mana, int intl, int agi, int str, int tgh, int wis, int gold);
+
 	#pragma region Properties
 
 	property int HP

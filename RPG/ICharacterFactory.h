@@ -4,6 +4,5 @@
 
 interface class ICharacterFactory
 {
-	public:
 	Character^ createCharacter();
 };

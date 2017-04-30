@@ -1,6 +1,18 @@
 #include "stdafx.h"
 #include "Statistics.h"
 
+Statistics::Statistics(int hp, int mana, int intl, int agi, int str, int tgh, int wis, int gold)
+{
+	this->HP = hp;
+	this->Mana = mana;
+	this->Intelligence = intl;
+	this->Agility = agi;
+	this->Strength = str;
+	this->Toughness = tgh;
+	this->Wisdom = wis;
+	this->Gold = gold;
+}
+
 #pragma region Getters
 
 int Statistics::HP::get() {

@@ -16,8 +16,38 @@
     <Filter Include="Pliki nagłówkowe\Items">
       <UniqueIdentifier>{25c78a59-4adb-4cad-86ac-c18e23a189aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki nagłówkowe\Exceptions">
-      <UniqueIdentifier>{93e0d15d-b8fe-44b5-b508-57d5aa552134}</UniqueIdentifier>
+    <Filter Include="Pliki źródłowe\Items">
+      <UniqueIdentifier>{5f20ed50-8bc6-40b6-968c-a8c2cf5d6451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementations">
+      <UniqueIdentifier>{c755a74d-327c-412d-92ff-4f804960b587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations">
+      <UniqueIdentifier>{a9a6f04e-f66d-4c53-808b-bd3b7469a964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementations\Food">
+      <UniqueIdentifier>{e0cd0249-4901-4555-b015-6eda3a1d3770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementations\Wearable">
+      <UniqueIdentifier>{d7878020-6a2f-4312-871b-9f00c4283c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations\Food">
+      <UniqueIdentifier>{435bb232-d0fa-4c5e-a2e6-0f9e025476d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations\Wearable">
+      <UniqueIdentifier>{ae98ebac-6490-4251-9838-ac026ebe31cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Character">
+      <UniqueIdentifier>{613a6bdb-dc3c-4b5f-92e0-76e6794d28ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Character">
+      <UniqueIdentifier>{ca2b9861-90e2-4830-918e-ef215249ed61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Implementations">
+      <UniqueIdentifier>{e779a7cc-3ccc-4cbc-84c4-e2e7f5c1f213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Character\Implementations">
+      <UniqueIdentifier>{c459e529-9643-414a-a12c-e79d7c92869b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,29 +60,53 @@
     <ClInclude Include="resource.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="ICharacterFactory.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="Statistics.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Equipment.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="IWearable.h">
+    <ClInclude Include="Item.h">
       <Filter>Pliki nagłówkowe\Items</Filter>
     </ClInclude>
-    <ClInclude Include="IFood.h">
+    <ClInclude Include="Wearable.h">
       <Filter>Pliki nagłówkowe\Items</Filter>
     </ClInclude>
-    <ClInclude Include="IItem.h">
+    <ClInclude Include="Food.h">
       <Filter>Pliki nagłówkowe\Items</Filter>
     </ClInclude>
-    <ClInclude Include="EquipmentOutOfRangeException.h">
-      <Filter>Pliki nagłówkowe\Exceptions</Filter>
+    <ClInclude Include="MagicBlueberry.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Apple.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Bread.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Helmet.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
+    </ClInclude>
+    <ClInclude Include="Chestplate.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicBoots.h">
+      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
+    </ClInclude>
+    <ClInclude Include="ICharacterFactory.h">
+      <Filter>Pliki nagłówkowe\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Pliki nagłówkowe\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="OrcFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantWaspFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="MysteriousWizardFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -76,8 +130,41 @@
     <ClCompile Include="Equipment.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>Pliki źródłowe\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Wearable.cpp">
+      <Filter>Pliki źródłowe\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicBlueberry.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Apple.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Bread.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Helmet.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
+    </ClCompile>
+    <ClCompile Include="Chestplate.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicBoots.cpp">
+      <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
+    </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="OrcFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantWaspFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementations</Filter>
+    </ClCompile>
+    <ClCompile Include="MysteriousWizardFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

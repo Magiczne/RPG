@@ -6,8 +6,8 @@ using namespace Items;
 
 Equipment::Equipment()
 {
-	_toUse = gcnew List<IItem^>();
-	_inUse = gcnew List<IItem^>();
+	_toUse = gcnew List<Item^>();
+	_inUse = gcnew List<Item^>();
 }
 
 void Equipment::use(int index)
@@ -22,7 +22,6 @@ void Equipment::use(int index)
 		}
 		else
 		{
-			//TODO: Use item
 			this->remove(item);
 		}
 	}
@@ -45,10 +44,6 @@ void Equipment::wear(int index)
 			this->_inUse->Add(item);
 		}
 	}
-	else
-	{
-	
-	}
 
 	//TODO: Error handling?
 }
@@ -66,12 +61,12 @@ void Equipment::unWear(int index)
 	//TODO: Error handling?
 }
 
-void Equipment::add(IItem^ item)
+void Equipment::add(Item^ item)
 {
 	_toUse->Add(item);
 }
 
-void Equipment::remove(IItem^ item)
+void Equipment::remove(Item^ item)
 {
 	_toUse->Remove(item);
 }
