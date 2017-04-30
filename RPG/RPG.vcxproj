@@ -143,6 +143,7 @@
     <ClInclude Include="Character.h" />
     <ClInclude Include="Chestplate.h" />
     <ClInclude Include="Equipment.h" />
+    <ClInclude Include="EquipmentIndexOutOfRangeException.h" />
     <ClInclude Include="GiantWaspFactory.h" />
     <ClInclude Include="Helmet.h" />
     <ClInclude Include="ICharacterFactory.h" />

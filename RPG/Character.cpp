@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Character.h"
 
+#include "EquipmentIndexOutOfRangeException.h";
+
 using namespace System;
 
 Character::Character(String^ desc, Statistics^ stats) 
@@ -61,14 +63,28 @@ void Character::use(int index)
 
 bool Character::wear(int index)
 {
-	this->_equipment->wear(index);
-	//TODO: Error handling
+	try
+	{
+		this->_equipment->wear(index);
+		return true;
+	}
+	catch(EquipmentIndexOutOfRangeException^)
+	{
+		return false;
+	}
 }
 
 bool Character::unWear(int index)
 {
-	this->_equipment->unWear(index);
-	//TODO: Error handling
+	try 
+	{
+		this->_equipment->unWear(index);
+		return true;
+	}
+	catch (EquipmentIndexOutOfRangeException^)
+	{
+		return false;
+	}
 }
 
 Statistics^ Character::getStatistics()

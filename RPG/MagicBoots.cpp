@@ -1,8 +1,9 @@
-#include "Chestplate.h"
+#include "stdafx.h"
+#include "MagicBoots.h"
 
 using namespace Items;
 
-Statistics^ Chestplate::getStatistics()
+Statistics^ MagicBoots::getStatistics()
 {
 	return gcnew Statistics(0, 0, 2, 0, 1, 2, 2, 0);
 }

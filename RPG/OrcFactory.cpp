@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "OrcFactory.h"
 #include "Character.h"
 

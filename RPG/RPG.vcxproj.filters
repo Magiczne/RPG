@@ -49,6 +49,9 @@
     <Filter Include="Pliki źródłowe\Character\Implementations">
       <UniqueIdentifier>{c459e529-9643-414a-a12c-e79d7c92869b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Exceptions">
+      <UniqueIdentifier>{665a9ddf-ccda-4007-9521-669f322994c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -107,6 +110,9 @@
     </ClInclude>
     <ClInclude Include="MysteriousWizardFactory.h">
       <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipmentIndexOutOfRangeException.h">
+      <Filter>Pliki nagłówkowe\Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

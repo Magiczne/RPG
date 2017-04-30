@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Equipment.h"
+#include "EquipmentIndexOutOfRangeException.h"
 
 using namespace System::Collections::Generic;
 using namespace Items;
@@ -44,8 +45,10 @@ void Equipment::wear(int index)
 			this->_inUse->Add(item);
 		}
 	}
-
-	//TODO: Error handling?
+	else
+	{
+		throw gcnew EquipmentIndexOutOfRangeException();
+	}
 }
 
 void Equipment::unWear(int index)
@@ -57,8 +60,10 @@ void Equipment::unWear(int index)
 		this->_inUse->Remove(item);
 		this->_toUse->Add(item);
 	}
-	
-	//TODO: Error handling?
+	else
+	{
+		throw gcnew EquipmentIndexOutOfRangeException();
+	}
 }
 
 void Equipment::add(Item^ item)
