@@ -26,8 +26,10 @@ void Equipment::use(int index)
 			this->remove(item);
 		}
 	}
-
-	//TODO: Error handling
+	else
+	{
+		throw gcnew EquipmentIndexOutOfRangeException;
+	}
 }
 
 void Equipment::wear(int index)
@@ -54,7 +56,7 @@ void Equipment::wear(int index)
 	}
 	else
 	{
-		throw gcnew EquipmentIndexOutOfRangeException();
+		throw gcnew EquipmentIndexOutOfRangeException;
 	}
 }
 
@@ -69,7 +71,7 @@ void Equipment::unWear(int index)
 	}
 	else
 	{
-		throw gcnew EquipmentIndexOutOfRangeException();
+		throw gcnew EquipmentIndexOutOfRangeException;
 	}
 }
 
@@ -91,7 +93,7 @@ Item^ Equipment::get(int index)
 	} 
 	else
 	{
-		throw gcnew EquipmentIndexOutOfRangeException();
+		throw gcnew EquipmentIndexOutOfRangeException;
 	}
 }
 
@@ -103,7 +105,7 @@ Item^ Equipment::getEquipped(int index)
 	}
 	else
 	{
-		throw gcnew EquipmentIndexOutOfRangeException();
+		throw gcnew EquipmentIndexOutOfRangeException;
 	}
 }
 
