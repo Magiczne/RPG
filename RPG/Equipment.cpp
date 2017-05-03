@@ -75,3 +75,37 @@ void Equipment::remove(Item^ item)
 {
 	_toUse->Remove(item);
 }
+
+Item^ Equipment::get(int index)
+{
+	if(index <= this->_toUse->Count - 1)
+	{
+		return this->_toUse[index];
+	} 
+	else
+	{
+		throw gcnew EquipmentIndexOutOfRangeException();
+	}
+}
+
+Item^ Equipment::getEquipped(int index)
+{
+	if (index <= this->_inUse->Count - 1)
+	{
+		return this->_inUse[index];
+	}
+	else
+	{
+		throw gcnew EquipmentIndexOutOfRangeException();
+	}
+}
+
+int Equipment::CurrentCapacity::get()
+{
+	return this->_toUse->Count;
+}
+
+int Equipment::CurrentEquippedCapacity::get()
+{
+	return this->_inUse->Count;
+}

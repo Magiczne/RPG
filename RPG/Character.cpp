@@ -57,14 +57,22 @@ int Character::baseRangeAttack()
 
 void Character::use(int index)
 {
-	this->_equipment->use(index);
-	//TODO: Error handling
+	try
+	{
+		this->_statistics->add(this->_equipment->get(index)->getStatistics());
+		this->_equipment->use(index);
+	}
+	catch(EquipmentIndexOutOfRangeException^)
+	{
+		//TODO: Error handling
+	}
 }
 
 bool Character::wear(int index)
 {
 	try
 	{
+		this->_statistics->add(this->_equipment->get(index)->getStatistics());
 		this->_equipment->wear(index);
 		return true;
 	}
@@ -78,6 +86,7 @@ bool Character::unWear(int index)
 {
 	try 
 	{
+		this->_statistics->substract(this->_equipment->getEquipped(index)->getStatistics());
 		this->_equipment->unWear(index);
 		return true;
 	}

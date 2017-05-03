@@ -32,19 +32,19 @@ int Statistics::Agility::get() {
 }
 
 int Statistics::Strength::get() {
-	return this->_agility;
+	return this->_strength;
 }
 
 int Statistics::Toughness::get() {
-	return this->_agility;
+	return this->_toughness;
 }
 
 int Statistics::Wisdom::get() {
-	return this->_agility;
+	return this->_wisdom;
 }
 
 int Statistics::Gold::get() {
-	return this->_agility;
+	return this->_gold;
 }
 
 #pragma endregion

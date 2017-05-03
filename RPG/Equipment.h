@@ -17,4 +17,15 @@ public:
 	void unWear(int index);
 	void add(Items::Item^ item);
 	void remove(Items::Item^ item);
+
+	Items::Item^ get(int);
+	Items::Item^ getEquipped(int);
+	property int CurrentCapacity 
+	{
+		int get();
+	}
+	property int CurrentEquippedCapacity 
+	{
+		int get();
+	}
 };
