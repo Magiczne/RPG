@@ -13,7 +13,7 @@ Equipment::Equipment()
 
 void Equipment::use(int index)
 {
-	if(index <= this->_toUse->Count - 1)
+	if(index >= 0 && index <= this->_toUse->Count - 1)
 	{
 		auto item = _toUse[index];
 
@@ -32,17 +32,24 @@ void Equipment::use(int index)
 
 void Equipment::wear(int index)
 {
-	if(
-		index <= this->_toUse->Count - 1 && 
-		this->_inUse->Count < this->_maxCapacity
+	if (
+		index >= 0 && 
+		index <= this->_toUse->Count - 1
 	)
 	{
-		auto item = _toUse[index];
+		if (this->_inUse->Count < this->_maxCapacity) 
+		{	
+			auto item = _toUse[index];
 
-		if(item->isWearable())
+			if (item->isWearable())
+			{
+				this->_toUse->Remove(item);
+				this->_inUse->Add(item);
+			}
+		}
+		else
 		{
-			this->_toUse->Remove(item);
-			this->_inUse->Add(item);
+			//TODO: Maybe some message
 		}
 	}
 	else
@@ -53,7 +60,7 @@ void Equipment::wear(int index)
 
 void Equipment::unWear(int index)
 {
-	if (index <= this->_inUse->Count - 1)
+	if (index >= 0 && index <= this->_inUse->Count - 1)
 	{
 		auto item = _inUse[index];
 
@@ -78,7 +85,7 @@ void Equipment::remove(Item^ item)
 
 Item^ Equipment::get(int index)
 {
-	if(index <= this->_toUse->Count - 1)
+	if(index >= 0 && index <= this->_toUse->Count - 1)
 	{
 		return this->_toUse[index];
 	} 
@@ -90,7 +97,7 @@ Item^ Equipment::get(int index)
 
 Item^ Equipment::getEquipped(int index)
 {
-	if (index <= this->_inUse->Count - 1)
+	if (index >= 0 && index <= this->_inUse->Count - 1)
 	{
 		return this->_inUse[index];
 	}
