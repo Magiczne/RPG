@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Equipment.h"
-#include "EquipmentIndexOutOfRangeException.h"
+
+#include "ItemNotWearableException.h"
+#include "EquipmentOutOfRangeException.h"
 
 using namespace System::Collections::Generic;
 using namespace Items;
@@ -11,68 +13,70 @@ Equipment::Equipment()
 	_inUse = gcnew List<Item^>();
 }
 
-void Equipment::use(int index)
+Statistics^ Equipment::use(int index)
 {
+	//If index is not out of range process items
 	if(index >= 0 && index <= this->_toUse->Count - 1)
 	{
 		auto item = _toUse[index];
 
 		if(item->isWearable())
 		{
-			this->wear(index);
+			return this->wear(index);
 		}
 		else
 		{
 			this->remove(item);
+			return item->getStatistics();
 		}
 	}
-	else
-	{
-		throw gcnew EquipmentIndexOutOfRangeException;
-	}
+
+	//If it is not throw
+	throw gcnew EquipmentOutOfRangeException;
 }
 
-void Equipment::wear(int index)
+Statistics^ Equipment::wear(int index)
 {
-	if (
-		index >= 0 && 
-		index <= this->_toUse->Count - 1
-	)
+	//If index is not out of range try to wear item
+	if (index >= 0 && index <= this->_toUse->Count - 1)
 	{
 		if (this->_inUse->Count < this->_maxCapacity) 
 		{	
 			auto item = _toUse[index];
 
+			//If items is wearable wear and return statistics
 			if (item->isWearable())
 			{
 				this->_toUse->Remove(item);
 				this->_inUse->Add(item);
+
+				return item->getStatistics();
 			}
-		}
-		else
-		{
-			//TODO: Maybe some message
+			
+			//If it is not throw
+			throw gcnew ItemNotWearableException;
 		}
 	}
-	else
-	{
-		throw gcnew EquipmentIndexOutOfRangeException;
-	}
+	
+	//If it is not throw
+	throw gcnew EquipmentOutOfRangeException;
 }
 
-void Equipment::unWear(int index)
+Statistics^ Equipment::unWear(int index)
 {
+	//If index is not out of range try to wear item
 	if (index >= 0 && index <= this->_inUse->Count - 1)
 	{
 		auto item = _inUse[index];
 
 		this->_inUse->Remove(item);
 		this->_toUse->Add(item);
+
+		return item->getStatistics();
 	}
-	else
-	{
-		throw gcnew EquipmentIndexOutOfRangeException;
-	}
+	
+	//If it is not throw
+	throw gcnew EquipmentOutOfRangeException;
 }
 
 void Equipment::add(Item^ item)
@@ -83,38 +87,4 @@ void Equipment::add(Item^ item)
 void Equipment::remove(Item^ item)
 {
 	_toUse->Remove(item);
-}
-
-Item^ Equipment::get(int index)
-{
-	if(index >= 0 && index <= this->_toUse->Count - 1)
-	{
-		return this->_toUse[index];
-	} 
-	else
-	{
-		throw gcnew EquipmentIndexOutOfRangeException;
-	}
-}
-
-Item^ Equipment::getEquipped(int index)
-{
-	if (index >= 0 && index <= this->_inUse->Count - 1)
-	{
-		return this->_inUse[index];
-	}
-	else
-	{
-		throw gcnew EquipmentIndexOutOfRangeException;
-	}
-}
-
-int Equipment::CurrentCapacity::get()
-{
-	return this->_toUse->Count;
-}
-
-int Equipment::CurrentEquippedCapacity::get()
-{
-	return this->_inUse->Count;
 }

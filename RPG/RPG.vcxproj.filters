@@ -43,12 +43,6 @@
     <Filter Include="Pliki nagłówkowe\Character">
       <UniqueIdentifier>{ca2b9861-90e2-4830-918e-ef215249ed61}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki nagłówkowe\Character\Implementations">
-      <UniqueIdentifier>{e779a7cc-3ccc-4cbc-84c4-e2e7f5c1f213}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Character\Implementations">
-      <UniqueIdentifier>{c459e529-9643-414a-a12c-e79d7c92869b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki nagłówkowe\Exceptions">
       <UniqueIdentifier>{665a9ddf-ccda-4007-9521-669f322994c8}</UniqueIdentifier>
     </Filter>
@@ -102,16 +96,10 @@
     <ClInclude Include="Character.h">
       <Filter>Pliki nagłówkowe\Character</Filter>
     </ClInclude>
-    <ClInclude Include="OrcFactory.h">
-      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
+    <ClInclude Include="ItemNotWearableException.h">
+      <Filter>Pliki nagłówkowe\Exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="GiantWaspFactory.h">
-      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
-    </ClInclude>
-    <ClInclude Include="MysteriousWizardFactory.h">
-      <Filter>Pliki nagłówkowe\Character\Implementations</Filter>
-    </ClInclude>
-    <ClInclude Include="EquipmentIndexOutOfRangeException.h">
+    <ClInclude Include="EquipmentOutOfRangeException.h">
       <Filter>Pliki nagłówkowe\Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
@@ -162,15 +150,6 @@
     </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>Pliki źródłowe\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="OrcFactory.cpp">
-      <Filter>Pliki źródłowe\Character\Implementations</Filter>
-    </ClCompile>
-    <ClCompile Include="GiantWaspFactory.cpp">
-      <Filter>Pliki źródłowe\Character\Implementations</Filter>
-    </ClCompile>
-    <ClCompile Include="MysteriousWizardFactory.cpp">
-      <Filter>Pliki źródłowe\Character\Implementations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,26 +1,17 @@
 #include "stdafx.h"
 #include "Character.h"
 
-#include "EquipmentIndexOutOfRangeException.h";
+#include "EquipmentOutOfRangeException.h"
 
 using namespace System;
 
-Character::Character(String^ desc, Statistics^ stats) 
-	: Character(desc, stats, false)
-{
-}
-
-
-Character::Character(String^ desc, Statistics^ stats, bool player)
+Character::Character(String^ desc, Statistics^ stats)
 {
 	this->Description = desc;
 	this->_statistics = stats;
 	this->_equipment = gcnew Equipment;
 
-	if(player)
-	{
-		this->_statistics->add(gcnew Statistics(0, 0, 0, 0, 0, 0, 0, 100));
-	}
+	this->_statistics->add(gcnew Statistics(0, 0, 0, 0, 0, 0, 0, 100));
 }
 
 String^ Character::Description::get()
@@ -43,28 +34,15 @@ int Character::getMaxMana()
 	return this->_statistics->Intelligence * 5;
 }
 
-int Character::baseMeleeAttack()
-{
-	//TODO: Melee is strength?
-	return this->_statistics->Strength * 2;
-}
-
-int Character::baseRangeAttack()
-{
-	//TODO: Ranged is agility?
-	return this->_statistics->Agility * 2;
-}
-
 void Character::use(int index)
 {
 	try
 	{
-		this->_statistics->add(this->_equipment->get(index)->getStatistics());
-		this->_equipment->use(index);
+		this->_statistics->add(this->_equipment->use(index));
 	}
-	catch(EquipmentIndexOutOfRangeException^)
+	catch(EquipmentOutOfRangeException^)
 	{
-		//TODO: Error handling
+		//Do nothing basically...
 	}
 }
 
@@ -72,11 +50,10 @@ bool Character::wear(int index)
 {
 	try
 	{
-		this->_statistics->add(this->_equipment->get(index)->getStatistics());
-		this->_equipment->wear(index);
+		this->_statistics->add(this->_equipment->wear(index));
 		return true;
 	}
-	catch(EquipmentIndexOutOfRangeException^)
+	catch(EquipmentOutOfRangeException^)
 	{
 		return false;
 	}
@@ -86,11 +63,10 @@ bool Character::unWear(int index)
 {
 	try 
 	{
-		this->_statistics->substract(this->_equipment->getEquipped(index)->getStatistics());
-		this->_equipment->unWear(index);
+		this->_statistics->substract(this->_equipment->unWear(index));
 		return true;
 	}
-	catch (EquipmentIndexOutOfRangeException^)
+	catch (EquipmentOutOfRangeException^)
 	{
 		return false;
 	}

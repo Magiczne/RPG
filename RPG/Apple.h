@@ -7,6 +7,10 @@ namespace Items
 	public ref class Apple : public Food
 	{
 	public:
+		/// <summary>
+		/// Gets item statistics
+		/// </summary>
+		/// <returns>Item statistics</returns>
 		Statistics^ getStatistics() override;
 	};
 }
