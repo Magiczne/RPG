@@ -19,17 +19,8 @@
     <Filter Include="Pliki źródłowe\Items">
       <UniqueIdentifier>{5f20ed50-8bc6-40b6-968c-a8c2cf5d6451}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki nagłówkowe\Items\Implementations">
-      <UniqueIdentifier>{c755a74d-327c-412d-92ff-4f804960b587}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\Items\Implementations">
       <UniqueIdentifier>{a9a6f04e-f66d-4c53-808b-bd3b7469a964}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe\Items\Implementations\Food">
-      <UniqueIdentifier>{e0cd0249-4901-4555-b015-6eda3a1d3770}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki nagłówkowe\Items\Implementations\Wearable">
-      <UniqueIdentifier>{d7878020-6a2f-4312-871b-9f00c4283c74}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\Items\Implementations\Food">
       <UniqueIdentifier>{435bb232-d0fa-4c5e-a2e6-0f9e025476d9}</UniqueIdentifier>
@@ -46,6 +37,51 @@
     <Filter Include="Pliki nagłówkowe\Exceptions">
       <UniqueIdentifier>{665a9ddf-ccda-4007-9521-669f322994c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters">
+      <UniqueIdentifier>{80d26868-be8d-4fc7-a013-b4ad2722d3ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Locations">
+      <UniqueIdentifier>{ec6627f8-120c-4168-b728-2b605cfa619c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\UserInterface">
+      <UniqueIdentifier>{bc356d98-7a75-470f-b477-11bc2897f150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\UserInterface\Abstraction">
+      <UniqueIdentifier>{1dc62c5e-7052-46ca-ad33-d06bfd3003d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Locations\Abstraction">
+      <UniqueIdentifier>{185d1ce2-7a39-44c1-b29b-2fc52a53bfdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Abstraction">
+      <UniqueIdentifier>{9aa78bc9-4408-4f56-9157-a8405ff0429a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Abstraction\Rewards">
+      <UniqueIdentifier>{749a8317-713e-4d53-85d8-944a6cc7349d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Abstraction">
+      <UniqueIdentifier>{8f1740d7-15f6-4eeb-8e8c-79eea64b5c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementation">
+      <UniqueIdentifier>{c755a74d-327c-412d-92ff-4f804960b587}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementation\Food">
+      <UniqueIdentifier>{e0cd0249-4901-4555-b015-6eda3a1d3770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Items\Implementation\Wearable">
+      <UniqueIdentifier>{d7878020-6a2f-4312-871b-9f00c4283c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Abstraction">
+      <UniqueIdentifier>{f0c52270-bc0c-4ddd-8b6d-3a3a75232f62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Implementation">
+      <UniqueIdentifier>{d6da672a-bb36-4535-a8fd-8cb86b400854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Abstraction\Opponents">
+      <UniqueIdentifier>{6c04a81b-1248-40de-ad0b-0e41470765b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\UserInterface\Implementation">
+      <UniqueIdentifier>{b66a9010-3d88-487a-8dff-150d666a61ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -60,41 +96,23 @@
     <ClInclude Include="Statistics.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Equipment.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Pliki nagłówkowe\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="Wearable.h">
-      <Filter>Pliki nagłówkowe\Items</Filter>
-    </ClInclude>
-    <ClInclude Include="Food.h">
-      <Filter>Pliki nagłówkowe\Items</Filter>
-    </ClInclude>
     <ClInclude Include="MagicBlueberry.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Food</Filter>
     </ClInclude>
     <ClInclude Include="Apple.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Food</Filter>
     </ClInclude>
     <ClInclude Include="Bread.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Food</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Food</Filter>
     </ClInclude>
     <ClInclude Include="Helmet.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Wearable</Filter>
     </ClInclude>
     <ClInclude Include="Chestplate.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Wearable</Filter>
     </ClInclude>
     <ClInclude Include="MagicBoots.h">
-      <Filter>Pliki nagłówkowe\Items\Implementations\Wearable</Filter>
-    </ClInclude>
-    <ClInclude Include="ICharacterFactory.h">
-      <Filter>Pliki nagłówkowe\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Pliki nagłówkowe\Character</Filter>
+      <Filter>Pliki nagłówkowe\Items\Implementation\Wearable</Filter>
     </ClInclude>
     <ClInclude Include="ItemNotWearableException.h">
       <Filter>Pliki nagłówkowe\Exceptions</Filter>
@@ -102,9 +120,54 @@
     <ClInclude Include="EquipmentOutOfRangeException.h">
       <Filter>Pliki nagłówkowe\Exceptions</Filter>
     </ClInclude>
+    <ClInclude Include="Reward.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Rewards</Filter>
+    </ClInclude>
+    <ClInclude Include="Opponent.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction\Opponents</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>Pliki nagłówkowe\UserInterface\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Encounter.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Wearable.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Equipment.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleUserInterface.h">
+      <Filter>Pliki nagłówkowe\UserInterface\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
+      <Filter>Pliki zasobów</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="RPG.rc">
       <Filter>Pliki zasobów</Filter>
     </ResourceCompile>
   </ItemGroup>
@@ -119,9 +182,6 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Statistics.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Equipment.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Food.cpp">
@@ -149,6 +209,9 @@
       <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
+      <Filter>Pliki źródłowe\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Equipment.cpp">
       <Filter>Pliki źródłowe\Character</Filter>
     </ClCompile>
   </ItemGroup>

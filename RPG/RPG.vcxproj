@@ -139,18 +139,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Apple.h" />
+    <ClInclude Include="Battle.h" />
     <ClInclude Include="Bread.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Chestplate.h" />
+    <ClInclude Include="ConsoleUserInterface.h" />
+    <ClInclude Include="Encounter.h" />
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="EquipmentOutOfRangeException.h" />
     <ClInclude Include="Helmet.h" />
-    <ClInclude Include="ICharacterFactory.h" />
+    <ClInclude Include="CharacterFactory.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNotWearableException.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="MagicBlueberry.h" />
     <ClInclude Include="MagicBoots.h" />
+    <ClInclude Include="Opponent.h" />
+    <ClInclude Include="Reward.h" />
+    <ClInclude Include="Shop.h" />
+    <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Wearable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Statistics.h" />
@@ -158,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
+    <ResourceCompile Include="RPG.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Apple.cpp" />

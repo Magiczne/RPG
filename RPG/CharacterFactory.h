@@ -2,7 +2,7 @@
 
 #include "Character.h"
 
-interface class ICharacterFactory
+interface class CharacterFactory
 {
 	/// <summary>
 	/// Creates a character
