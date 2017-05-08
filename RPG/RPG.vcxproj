@@ -147,15 +147,19 @@
     <ClInclude Include="Encounter.h" />
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="EquipmentOutOfRangeException.h" />
+    <ClInclude Include="GiantWasp.h" />
     <ClInclude Include="Helmet.h" />
     <ClInclude Include="CharacterFactory.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNotWearableException.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="MysteriousWizard.h" />
     <ClInclude Include="MagicBlueberry.h" />
     <ClInclude Include="MagicBoots.h" />
     <ClInclude Include="Opponent.h" />
+    <ClInclude Include="Orc.h" />
+    <ClInclude Include="Warrior.h" />
     <ClInclude Include="Reward.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="UserInterface.h" />
@@ -177,9 +181,13 @@
     <ClCompile Include="ConsoleUserInterface.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Food.cpp" />
+    <ClCompile Include="GiantWasp.cpp" />
     <ClCompile Include="Helmet.cpp" />
+    <ClCompile Include="MysteriousWizard.cpp" />
     <ClCompile Include="MagicBlueberry.cpp" />
     <ClCompile Include="MagicBoots.cpp" />
+    <ClCompile Include="Opponent.cpp" />
+    <ClCompile Include="Orc.cpp" />
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -188,6 +196,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="Wearable.cpp" />
   </ItemGroup>
   <ItemGroup>

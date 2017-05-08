@@ -5,7 +5,7 @@
 public ref class Opponent abstract
 	: public Character
 {
-private:
+protected:
 	Character^ _character;
 
 public:

@@ -5,7 +5,7 @@
 
 public ref class Character abstract
 {
-private:
+protected:
 	System::String^ _description;
 	Statistics^ _statistics;
 	Equipment^ _equipment;
