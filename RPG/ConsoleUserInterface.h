@@ -7,6 +7,7 @@ namespace UI
 	public ref class ConsoleUserInterface 
 		: public UserInterface
 	{
+	public:
 		/// <summary>
 		/// Asks the user a question with answers and gets the answer from him
 		/// </summary>
@@ -20,5 +21,13 @@ namespace UI
 		/// </summary>
 		/// <param name="message"></param>
 		virtual void showMessage(System::String^ message) override;
+
+	private:
+
+		/// <summary>
+		/// Writes text centered
+		/// </summary>
+		/// <param name="message"></param>
+		void writeCentered(System::String^ message);
 	};
 }

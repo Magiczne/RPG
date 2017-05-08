@@ -82,6 +82,18 @@
     <Filter Include="Pliki nagłówkowe\UserInterface\Implementation">
       <UniqueIdentifier>{b66a9010-3d88-487a-8dff-150d666a61ef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Character\Abstraction">
+      <UniqueIdentifier>{b4b1e7b7-deb5-430b-9b1e-0a288bbd8009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Character\Implementation">
+      <UniqueIdentifier>{83c3e66b-e30d-491e-b40e-a019b34e43b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\UserInterface">
+      <UniqueIdentifier>{f3d33763-6da1-45fc-8dd2-22ad1ca330b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\UserInterface\Implementation">
+      <UniqueIdentifier>{8cd4bc45-00d7-463a-9af8-8fc24a20d143}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -209,10 +221,13 @@
       <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>Pliki źródłowe\Character</Filter>
+      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
     </ClCompile>
     <ClCompile Include="Equipment.cpp">
-      <Filter>Pliki źródłowe\Character</Filter>
+      <Filter>Pliki źródłowe\Character\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleUserInterface.cpp">
+      <Filter>Pliki źródłowe\UserInterface\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
