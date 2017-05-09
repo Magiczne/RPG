@@ -1,8 +1,9 @@
 #pragma once
 
-#include "ICharacterFactory.h"
+#include "CharacterFactory.h"
 
-public ref class OrcFactory : public ICharacterFactory
+public ref class OrcFactory 
+	: public CharacterFactory
 {
 public:
 	virtual Character^ createCharacter();

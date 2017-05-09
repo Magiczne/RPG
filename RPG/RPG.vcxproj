@@ -148,6 +148,7 @@
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="EquipmentOutOfRangeException.h" />
     <ClInclude Include="GiantWasp.h" />
+    <ClInclude Include="GiantWaspFactory.h" />
     <ClInclude Include="Helmet.h" />
     <ClInclude Include="CharacterFactory.h" />
     <ClInclude Include="Food.h" />
@@ -157,8 +158,11 @@
     <ClInclude Include="MysteriousWizard.h" />
     <ClInclude Include="MagicBlueberry.h" />
     <ClInclude Include="MagicBoots.h" />
+    <ClInclude Include="MysteriousWizardFactory.h" />
     <ClInclude Include="Opponent.h" />
     <ClInclude Include="Orc.h" />
+    <ClInclude Include="OrcFactory.h" />
+    <ClInclude Include="StatisticsFactory.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="Reward.h" />
     <ClInclude Include="Shop.h" />
@@ -182,14 +186,17 @@
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="GiantWasp.cpp" />
+    <ClCompile Include="GiantWaspFactory.cpp" />
     <ClCompile Include="Helmet.cpp" />
     <ClCompile Include="MysteriousWizard.cpp" />
     <ClCompile Include="MagicBlueberry.cpp" />
     <ClCompile Include="MagicBoots.cpp" />
     <ClCompile Include="Opponent.cpp" />
     <ClCompile Include="Orc.cpp" />
+    <ClCompile Include="OrcFactory.cpp" />
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Statistics.cpp" />
+    <ClCompile Include="StatisticsFactory.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

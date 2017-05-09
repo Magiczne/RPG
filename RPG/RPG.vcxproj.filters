@@ -103,6 +103,12 @@
     <Filter Include="Pliki źródłowe\Character\Implementation\Opponents">
       <UniqueIdentifier>{89ca1c3d-6418-4cdc-a458-5679b7dc752e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Implementation\Factories">
+      <UniqueIdentifier>{570f6756-0127-4f68-b611-3a6cf91e9b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Character\Implementation\Factories">
+      <UniqueIdentifier>{b09faa6b-7c8c-4d8e-8393-b715ff7b6068}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -195,6 +201,18 @@
     <ClInclude Include="Warrior.h">
       <Filter>Pliki nagłówkowe\Character\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="OrcFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="GiantWaspFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="MysteriousWizardFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="StatisticsFactory.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -264,6 +282,15 @@
     </ClCompile>
     <ClCompile Include="Warrior.cpp">
       <Filter>Pliki źródłowe\Character\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="GiantWaspFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="OrcFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticsFactory.cpp">
+      <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

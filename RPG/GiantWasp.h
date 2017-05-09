@@ -7,4 +7,8 @@ public ref class GiantWasp
 {
 public:
 	GiantWasp(Character^ character);
+
+	virtual int baseMeleeAttack() override;
+	virtual int baseRangeAttack() override;
+	virtual int blockAttack() override;
 };

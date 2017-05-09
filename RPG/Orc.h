@@ -7,4 +7,8 @@ public ref class Orc
 {
 public:
 	Orc(Character^ character);
+
+	virtual int baseMeleeAttack() override;
+	virtual int baseRangeAttack() override;
+	virtual int blockAttack() override;
 };

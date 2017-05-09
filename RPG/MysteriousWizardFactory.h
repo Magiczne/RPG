@@ -2,7 +2,7 @@
 
 #include "CharacterFactory.h"
 
-public ref class GiantWaspFactory 
+public ref class MysteriousWizardFactory
 	: public CharacterFactory
 {
 public:

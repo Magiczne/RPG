@@ -46,6 +46,12 @@ public:
 	virtual int baseRangeAttack() abstract;
 
 	/// <summary>
+	/// Gets value of blocked damage
+	/// </summary>
+	/// <returns>Damage blocked by block</returns>
+	virtual int blockAttack() abstract;
+
+	/// <summary>
 	/// Uses item on specified index or if it is wearable wears it
 	/// </summary>
 	/// <param name="index">Index of item in toUse list in equipment</param>
