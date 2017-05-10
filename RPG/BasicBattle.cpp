@@ -54,12 +54,12 @@ void BasicBattle::fight(Character^ character)
 		switch (actionAnswer)
 		{
 		case 0:		//Melee attack
-			attackPower = attackModifier * character->baseMeleeAttack() - opponentBlockPower;
+			attackPower = safe_cast<int>(attackModifier * character->baseMeleeAttack() - opponentBlockPower);
 			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 
 			if (chosenOpponent->getStatistics()->HP > 0)
 			{
-				attackPower = attackModifier * chosenOpponent->baseMeleeAttack() - playerBlockPower;
+				attackPower = safe_cast<int>(attackModifier * chosenOpponent->baseMeleeAttack() - playerBlockPower);
 				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
@@ -67,12 +67,12 @@ void BasicBattle::fight(Character^ character)
 			opponentBlockPower = 0;
 			break;
 		case 1:		//Ranged attack
-			attackPower = attackModifier * character->baseRangeAttack();
+			attackPower = safe_cast<int>(attackModifier * character->baseRangeAttack());
 			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 
 			if (chosenOpponent->getStatistics()->HP > 0)
 			{
-				attackPower = attackModifier * chosenOpponent->baseRangeAttack();
+				attackPower = safe_cast<int>(attackModifier * chosenOpponent->baseRangeAttack());
 				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
