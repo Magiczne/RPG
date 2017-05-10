@@ -25,6 +25,7 @@ namespace Encounters
 		property UI::UserInterface^ UserInterface 
 		{
 			UI::UserInterface^ get();
+			void set(UI::UserInterface^ value);
 		}
 	};
 }
