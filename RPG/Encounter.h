@@ -8,8 +8,10 @@ namespace Encounters
 	public ref class Encounter abstract
 	{
 	private:
-		System::String^ _configFile;
 		UI::UserInterface^ _userInterface;
+
+	protected:
+		System::String^ _configFile;
 
 	public:
 		/// <summary>

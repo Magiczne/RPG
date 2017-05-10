@@ -6,6 +6,14 @@
 
 namespace Encounters
 {
+	/// Config file structure:
+	/// 1. Name
+	/// 2. Description
+	/// 3. Action question
+	/// 4. Melee Attack
+	/// 5. Ranged Attack
+	/// 6. Block Attack
+	/// 7-n. Special
 	public ref class Battle abstract
 		: public Encounter
 	{

@@ -12,7 +12,6 @@ namespace Encounters
 		System::Collections::Generic::List<Items::Item^>^ _items;
 
 	public:
-
 		/// <summary>
 		/// Trades with character
 		/// </summary>
@@ -21,10 +20,10 @@ namespace Encounters
 
 		/// <summary>
 		/// Items available in the shop
-		/// </summary>
-		property System::Collections::Generic::List<Items::Item^>^ Items
-		{
-			System::Collections::Generic::List<Items::Item^>^ get();
-		}
+		///// </summary>
+		//property System::Collections::Generic::List<Items::Item^>^ Items
+		//{
+		//	System::Collections::Generic::List<Items::Item^>^ get();
+		//}
 	};
 }

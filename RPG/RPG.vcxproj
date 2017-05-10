@@ -139,7 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Apple.h" />
+    <ClInclude Include="BasicBattle.h" />
     <ClInclude Include="Battle.h" />
+    <ClInclude Include="BattleWithRetreat.h" />
     <ClInclude Include="Bread.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Chestplate.h" />
@@ -163,6 +165,7 @@
     <ClInclude Include="Opponent.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="OrcFactory.h" />
+    <ClInclude Include="PlayerDeadException.h" />
     <ClInclude Include="StatisticsFactory.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="Reward.h" />
@@ -174,6 +177,7 @@
   <ItemGroup>
     <ClCompile Include="Apple.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="BasicBattle.cpp" />
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="Bread.cpp" />
     <ClCompile Include="Character.cpp" />

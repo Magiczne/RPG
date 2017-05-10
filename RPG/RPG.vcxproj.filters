@@ -121,6 +121,12 @@
     <Filter Include="Pliki źródłowe\Encounters\Abstraction">
       <UniqueIdentifier>{5bd55f16-3cf6-4db6-8909-d2b941ec2154}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Implementation">
+      <UniqueIdentifier>{d6dc4464-06ac-4133-b62f-b6c8146114ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Encounters\Implementation">
+      <UniqueIdentifier>{ee74ebec-9a7e-4025-b59d-cdca7e18e72c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -222,6 +228,15 @@
     <ClInclude Include="Statistics.h">
       <Filter>Pliki nagłówkowe\Character\Implementation\Statistics</Filter>
     </ClInclude>
+    <ClInclude Include="BattleWithRetreat.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicBattle.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerDeadException.h">
+      <Filter>Pliki nagłówkowe\Exceptions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -298,6 +313,9 @@
     </ClCompile>
     <ClCompile Include="Shop.cpp">
       <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicBattle.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,10 +1,19 @@
 #include "Battle.h"
 
 using namespace System;
+using namespace System::IO;
 using namespace System::Collections::Generic;
 
 using namespace Encounters;
 using namespace Rewards;
+
+Battle::Battle()
+{
+	auto lines = File::ReadAllLines(this->_configFile);
+
+	this->Name = lines[0];
+	this->Description = lines[1];
+}
 
 #pragma region Getters
 
