@@ -115,6 +115,12 @@
     <Filter Include="Pliki źródłowe\Character\Implementation\Statistics">
       <UniqueIdentifier>{38caeab2-d61d-49c9-bb65-32107a13fef9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Encounters">
+      <UniqueIdentifier>{3e1645bb-ee58-4506-91b0-33fbc73d318c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Encounters\Abstraction">
+      <UniqueIdentifier>{5bd55f16-3cf6-4db6-8909-d2b941ec2154}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -283,6 +289,15 @@
     </ClCompile>
     <ClCompile Include="StatisticsFactory.cpp">
       <Filter>Pliki źródłowe\Character\Implementation\Statistics</Filter>
+    </ClCompile>
+    <ClCompile Include="Encounter.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

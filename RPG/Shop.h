@@ -18,5 +18,13 @@ namespace Encounters
 		/// </summary>
 		/// <param name="character">Character to trade with</param>
 		virtual void trade(Character^ character) abstract;
+
+		/// <summary>
+		/// Items available in the shop
+		/// </summary>
+		property System::Collections::Generic::List<Items::Item^>^ Items
+		{
+			System::Collections::Generic::List<Items::Item^>^ get();
+		}
 	};
 }
