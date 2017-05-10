@@ -15,80 +15,96 @@ BasicBattle::BasicBattle()
 	
 }
 
-void BasicBattle::fight(Character^ characater)
+void BasicBattle::fight(Character^ character)
 {
 	auto lines = File::ReadAllLines(this->_configFile);
 
-	auto answers = gcnew List<String^>();
+	auto actionAnswers = gcnew List<String^>();
 
-	String^ question = lines[2];
-	for (int i = 3; i < lines->Length; i++)
+	String^ actionQuestion = lines[2];
+	String^ chooseOpponentQuestion = lines[3];
+	for (int i = 4; i < lines->Length; i++)
 	{
-		answers->Add(lines[i]);
+		actionAnswers->Add(lines[i]);
 	}
 
 	auto random = gcnew Random();
 
-	for each(auto currentOpponent in this->Opponents)
+	double attackModifier = (double)random->Next(75, 100) / 100.0;
+
+	int attackPower = 0;
+	int playerBlockPower = 0;
+	int opponentBlockPower = 0;
+
+	while (true)
 	{
-		double attackModifier = (double)random->Next(75, 100) / 100.0;
+		//Chosing opponent
+		auto opponentList = gcnew List<String^>();
 
-		int attackPower = 0;
-		int playerBlockPower = 0;
-		int opponentBlockPower = 0;
-
-		while (true)
+		for each(auto opponent in Opponents)
 		{
-			auto answer = this->UserInterface->askQuestion(question, answers);
+			opponentList->Add(opponent->Description);
+		}
 
-			switch (answer)
+		auto opponentNumber = this->UserInterface->askQuestion(chooseOpponentQuestion, opponentList);
+		auto chosenOpponent = Opponents[opponentNumber];
+		
+		//Fighting
+		auto actionAnswer = this->UserInterface->askQuestion(actionQuestion, actionAnswers);
+
+		switch (actionAnswer)
+		{
+		case 0:		//Melee attack
+			attackPower = attackModifier * character->baseMeleeAttack() - opponentBlockPower;
+			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+
+			if (chosenOpponent->getStatistics()->HP > 0)
 			{
-			case 0:		//Melee attack
-				attackPower = attackModifier * characater->baseMeleeAttack() - opponentBlockPower;
-				currentOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
-
-				if (currentOpponent->getStatistics()->HP > 0)
-				{
-					attackPower = attackModifier * currentOpponent->baseMeleeAttack() - playerBlockPower;
-					characater->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
-				}
-
-				playerBlockPower = 0;
-				opponentBlockPower = 0;
-				break;
-			case 1:		//Ranged attack
-				attackPower = attackModifier * characater->baseRangeAttack();
-				currentOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
-
-				if (currentOpponent->getStatistics()->HP > 0)
-				{
-					attackPower = attackModifier * currentOpponent->baseRangeAttack();
-					characater->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
-				}
-
-				playerBlockPower = 0;
-				opponentBlockPower = 0;
-				break;
-			case 2:		//Block
-				playerBlockPower = characater->baseMeleeAttack();
-				opponentBlockPower = currentOpponent->blockAttack();
-				break;
-			default:	//Just break
-				break;
+				attackPower = attackModifier * chosenOpponent->baseMeleeAttack() - playerBlockPower;
+				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
-			//If opponent dead remove
-			if (currentOpponent->getStatistics()->HP <= 0)
+			playerBlockPower = 0;
+			opponentBlockPower = 0;
+			break;
+		case 1:		//Ranged attack
+			attackPower = attackModifier * character->baseRangeAttack();
+			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+
+			if (chosenOpponent->getStatistics()->HP > 0)
 			{
-				this->Opponents->Remove(currentOpponent);
+				attackPower = attackModifier * chosenOpponent->baseRangeAttack();
+				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
-			//If player dead return and throw
-			if(characater->getStatistics()->HP <= 0)
-			{
-				throw gcnew PlayerDeadException;
-				return;
-			}
+			playerBlockPower = 0;
+			opponentBlockPower = 0;
+			break;
+		case 2:		//Block
+			playerBlockPower = character->baseMeleeAttack();
+			opponentBlockPower = chosenOpponent->blockAttack();
+			break;
+		default:	//Just break
+			break;
+		}
+
+		//If opponent dead remove
+		if (chosenOpponent->getStatistics()->HP <= 0)
+		{
+			this->Opponents->Remove(chosenOpponent);
+		}
+		
+		//If there is no more opponents return
+		if(Opponents->Count == 0)
+		{
+			return;
+		}
+
+		//If player dead return and throw
+		if (character->getStatistics()->HP <= 0)
+		{
+			throw gcnew PlayerDeadException;
+			return;
 		}
 	}
 }
@@ -98,6 +114,7 @@ bool BasicBattle::proceed(Character^ character)
 	try
 	{
 		this->fight(character);
+		this->Reward->apply(character);
 		return false;
 	}
 	catch(PlayerDeadException^)
