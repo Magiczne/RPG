@@ -11,6 +11,7 @@ namespace Locations
 		System::String^ _description;
 		System::String^ _configFile;
 		System::Collections::Generic::List<Encounters::Encounter^>^ _encounters;
+		System::Collections::Generic::List<Location^>^ _neighbourLocations;
 
 	public:
 
@@ -43,6 +44,14 @@ namespace Locations
 		property System::Collections::Generic::List<Encounters::Encounter^>^ Encounters
 		{
 			System::Collections::Generic::List<Encounters::Encounter^>^ get();
+		}
+
+		/// <summary>
+		/// Neighbour locations
+		/// </summary>
+		property System::Collections::Generic::List<Location^>^ NeighbourLocations
+		{
+			System::Collections::Generic::List<Location^>^ get();
 		}
 	};
 }
