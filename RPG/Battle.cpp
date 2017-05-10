@@ -1,5 +1,7 @@
 #include "Battle.h"
 
+#include "PlayerDeadException.h"
+
 using namespace System;
 using namespace System::IO;
 using namespace System::Collections::Generic;
@@ -13,6 +15,20 @@ Battle::Battle()
 
 	this->Name = lines[0];
 	this->Description = lines[1];
+}
+
+bool Battle::proceed(Character^ character)
+{
+	try
+	{
+		this->fight(character);
+		this->Reward->apply(character);
+		return false;
+	}
+	catch (PlayerDeadException^)
+	{
+		return true;
+	}
 }
 
 #pragma region Getters

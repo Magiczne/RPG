@@ -1,20 +1,24 @@
-#include "BasicBattle.h"
+#pragma once
 
+#include "BattleWithRetreat.h"
 #include "StatisticsFactory.h"
+
 #include "PlayerDeadException.h"
+#include "PlayerRetreatException.h"
 
 using namespace Encounters;
+
 using namespace System;
 using namespace System::IO;
 using namespace System::Collections::Generic;
 
-BasicBattle::BasicBattle()
+BattleWithRetreat::BattleWithRetreat()
 	: Battle()
 {
 	
 }
 
-void BasicBattle::fight(Character^ character)
+void BattleWithRetreat::fight(Character^ character)
 {
 	auto lines = File::ReadAllLines(this->_configFile);
 
@@ -47,7 +51,7 @@ void BasicBattle::fight(Character^ character)
 
 		auto opponentNumber = this->UserInterface->askQuestion(chooseOpponentQuestion, opponentList);
 		auto chosenOpponent = Opponents[opponentNumber];
-		
+
 		//Fighting
 		auto actionAnswer = this->UserInterface->askQuestion(actionQuestion, actionAnswers);
 
@@ -83,6 +87,9 @@ void BasicBattle::fight(Character^ character)
 			playerBlockPower = character->baseMeleeAttack();
 			opponentBlockPower = chosenOpponent->blockAttack();
 			break;
+		case 3:		//Retreat
+			throw gcnew PlayerRetreatException;
+			return;
 		default:	//Just break
 			break;
 		}
@@ -92,9 +99,9 @@ void BasicBattle::fight(Character^ character)
 		{
 			this->Opponents->Remove(chosenOpponent);
 		}
-		
+
 		//If there is no more opponents return
-		if(Opponents->Count == 0)
+		if (Opponents->Count == 0)
 		{
 			return;
 		}
@@ -105,5 +112,17 @@ void BasicBattle::fight(Character^ character)
 			throw gcnew PlayerDeadException;
 			return;
 		}
+	}
+}
+
+bool BattleWithRetreat::proceed(Character^ character)
+{
+	try
+	{
+		return Battle::proceed(character);
+	}
+	catch(PlayerRetreatException^)
+	{
+		return false;
 	}
 }

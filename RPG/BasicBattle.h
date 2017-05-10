@@ -11,6 +11,5 @@ namespace Encounters
 		BasicBattle();
 
 		virtual void fight(Character^ character) override;
-		virtual bool proceed(Character^ character) override;
 	};
 }

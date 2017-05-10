@@ -17,7 +17,7 @@ namespace Encounters
 		/// <summary>
 		/// Process an encounter on player
 		/// </summary>
-		/// <param name="character">Character on whom proceed encounter</param>
+		/// <param name="character">Character on whom encounter was proceeded</param>
 		/// <returns>Encounter succedeed</returns>
 		virtual bool proceed(Character^ character) abstract;
 

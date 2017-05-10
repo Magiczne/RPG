@@ -127,6 +127,18 @@
     <Filter Include="Pliki źródłowe\Encounters\Implementation">
       <UniqueIdentifier>{ee74ebec-9a7e-4025-b59d-cdca7e18e72c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Implementation\Battles">
+      <UniqueIdentifier>{4b813864-ee08-498e-8bb5-d14d1b2b0e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Encounters\Implementation\Battles">
+      <UniqueIdentifier>{f7bd5ae5-2114-4df1-b4f5-9d480e6eaaaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Exceptions\Equipment">
+      <UniqueIdentifier>{9cfb2b01-347b-463a-9222-00a84fa446f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Exceptions\Player">
+      <UniqueIdentifier>{eb11ee9a-898c-444b-9015-629d603e0e30}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -149,12 +161,6 @@
     </ClInclude>
     <ClInclude Include="MagicBoots.h">
       <Filter>Pliki nagłówkowe\Items\Implementation\Wearable</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemNotWearableException.h">
-      <Filter>Pliki nagłówkowe\Exceptions</Filter>
-    </ClInclude>
-    <ClInclude Include="EquipmentOutOfRangeException.h">
-      <Filter>Pliki nagłówkowe\Exceptions</Filter>
     </ClInclude>
     <ClInclude Include="Reward.h">
       <Filter>Pliki nagłówkowe\Encounters\Abstraction\Rewards</Filter>
@@ -228,14 +234,23 @@
     <ClInclude Include="Statistics.h">
       <Filter>Pliki nagłówkowe\Character\Implementation\Statistics</Filter>
     </ClInclude>
-    <ClInclude Include="BattleWithRetreat.h">
-      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
-    </ClInclude>
     <ClInclude Include="BasicBattle.h">
-      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Battles</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleWithRetreat.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Battles</Filter>
+    </ClInclude>
+    <ClInclude Include="EquipmentOutOfRangeException.h">
+      <Filter>Pliki nagłówkowe\Exceptions\Equipment</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemNotWearableException.h">
+      <Filter>Pliki nagłówkowe\Exceptions\Equipment</Filter>
     </ClInclude>
     <ClInclude Include="PlayerDeadException.h">
-      <Filter>Pliki nagłówkowe\Exceptions</Filter>
+      <Filter>Pliki nagłówkowe\Exceptions\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerRetreatException.h">
+      <Filter>Pliki nagłówkowe\Exceptions\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -315,7 +330,10 @@
       <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
     </ClCompile>
     <ClCompile Include="BasicBattle.cpp">
-      <Filter>Pliki źródłowe\Encounters\Implementation</Filter>
+      <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleWithRetreat.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

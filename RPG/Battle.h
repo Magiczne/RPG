@@ -34,6 +34,13 @@ namespace Encounters
 		virtual void fight(Character^ character) abstract;
 
 		/// <summary>
+		/// Process an encounter on player
+		/// </summary>
+		/// <param name="character">Character on whom encounter was proceeded</param>
+		/// <returns>Encounter succedeed</returns>
+		virtual bool proceed(Character^ character) override;
+
+		/// <summary>
 		/// Battle name
 		/// </summary>
 		property System::String^ Name 
