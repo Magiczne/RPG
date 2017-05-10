@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Helmet.h"
 
 using namespace Items;

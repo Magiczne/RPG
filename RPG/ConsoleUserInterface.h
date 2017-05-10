@@ -9,7 +9,7 @@ namespace UI
 	{
 	public:
 		/// <summary>
-		/// Asks the user a question with answers and gets the answer from him
+		/// Asks the user a question with answers and gets the answer from user
 		/// </summary>
 		/// <param name="question">Question to ask</param>
 		/// <param name="answers">Answers for the question</param>

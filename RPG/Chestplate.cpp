@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Chestplate.h"
 
 using namespace Items;

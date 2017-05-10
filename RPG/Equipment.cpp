@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Equipment.h"
 
 #include "ItemNotWearableException.h"

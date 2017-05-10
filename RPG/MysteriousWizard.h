@@ -6,7 +6,7 @@ public ref class MysteriousWizard
 	: public Opponent
 {
 public:
-	MysteriousWizard(Character^ character);
+	MysteriousWizard(Statistics^ stats);
 
 	virtual int baseMeleeAttack() override;
 	virtual int baseRangeAttack() override;

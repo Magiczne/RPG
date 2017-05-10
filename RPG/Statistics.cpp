@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Statistics.h"
 
 Statistics::Statistics(int hp, int mana, int intl, int agi, int str, int tgh, int wis, int gold)

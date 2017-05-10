@@ -1,8 +1,9 @@
 #include "GiantWasp.h"
 
-GiantWasp::GiantWasp(Character^ character) : Opponent(character)
+GiantWasp::GiantWasp(Statistics^ stats) 
+	: Opponent(stats)
 {
-	
+	this->Description = "Giant Wasp";
 }
 
 int GiantWasp::baseMeleeAttack()

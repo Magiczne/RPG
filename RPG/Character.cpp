@@ -1,13 +1,11 @@
-#include "stdafx.h"
 #include "Character.h"
 
 #include "EquipmentOutOfRangeException.h"
 
 using namespace System;
 
-Character::Character(String^ desc, Statistics^ stats)
+Character::Character(Statistics^ stats)
 {
-	this->Description = desc;
 	this->_statistics = stats;
 	this->_equipment = gcnew Equipment;
 

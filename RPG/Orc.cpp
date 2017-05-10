@@ -1,8 +1,9 @@
 #include "Orc.h"
 
-Orc::Orc(Character^ character) : Opponent(character)
+Orc::Orc(Statistics^ stats) 
+	: Opponent(stats)
 {
-	
+	this->Description = "Orc";
 }
 
 int Orc::baseMeleeAttack()
@@ -12,7 +13,7 @@ int Orc::baseMeleeAttack()
 
 int Orc::baseRangeAttack()
 {
-	return this->_statistics->Agility * 1.5;
+	return static_cast<int>(this->_statistics->Agility * 1.5);
 }
 
 int Orc::blockAttack()

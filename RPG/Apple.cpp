@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Apple.h"
 
 using namespace Items;

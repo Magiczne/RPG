@@ -102,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
@@ -155,6 +155,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemNotWearableException.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="MadCharacter.h" />
     <ClInclude Include="MysteriousWizard.h" />
     <ClInclude Include="MagicBlueberry.h" />
     <ClInclude Include="MagicBoots.h" />
@@ -168,13 +169,7 @@
     <ClInclude Include="Shop.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Wearable.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Statistics.h" />
-    <ClInclude Include="stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc" />
-    <ResourceCompile Include="RPG.rc" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Apple.cpp" />
@@ -197,17 +192,8 @@
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="Wearable.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="app.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,7 +6,7 @@ public ref class GiantWasp
 	: public Opponent
 {
 public:
-	GiantWasp(Character^ character);
+	GiantWasp(Statistics^ stats);
 
 	virtual int baseMeleeAttack() override;
 	virtual int baseRangeAttack() override;

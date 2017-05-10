@@ -109,20 +109,17 @@
     <Filter Include="Pliki źródłowe\Character\Implementation\Factories">
       <UniqueIdentifier>{b09faa6b-7c8c-4d8e-8393-b715ff7b6068}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Character\Implementation\Statistics">
+      <UniqueIdentifier>{08d09fb4-1e0e-4039-8d8e-2eaa1486a66b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Character\Implementation\Statistics">
+      <UniqueIdentifier>{38caeab2-d61d-49c9-bb65-32107a13fef9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Statistics.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="MagicBlueberry.h">
       <Filter>Pliki nagłówkowe\Items\Implementation\Food</Filter>
     </ClInclude>
@@ -210,29 +207,21 @@
     <ClInclude Include="MysteriousWizardFactory.h">
       <Filter>Pliki nagłówkowe\Character\Implementation\Factories</Filter>
     </ClInclude>
-    <ClInclude Include="StatisticsFactory.h">
-      <Filter>Pliki nagłówkowe</Filter>
+    <ClInclude Include="MadCharacter.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Opponents</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="app.rc">
-      <Filter>Pliki zasobów</Filter>
-    </ResourceCompile>
-    <ResourceCompile Include="RPG.rc">
-      <Filter>Pliki zasobów</Filter>
-    </ResourceCompile>
+    <ClInclude Include="StatisticsFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="Statistics.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation\Statistics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Statistics.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="Food.cpp">
@@ -289,13 +278,11 @@
     <ClCompile Include="OrcFactory.cpp">
       <Filter>Pliki źródłowe\Character\Implementation\Factories</Filter>
     </ClCompile>
-    <ClCompile Include="StatisticsFactory.cpp">
-      <Filter>Pliki źródłowe</Filter>
+    <ClCompile Include="Statistics.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Statistics</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="app.ico">
-      <Filter>Pliki zasobów</Filter>
-    </Image>
+    <ClCompile Include="StatisticsFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Statistics</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

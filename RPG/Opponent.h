@@ -5,9 +5,6 @@
 public ref class Opponent abstract
 	: public Character
 {
-protected:
-	Character^ _character;
-
 public:
-	Opponent(Character^ character);
+	Opponent(Statistics^ stats);
 };

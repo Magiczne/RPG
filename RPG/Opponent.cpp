@@ -1,6 +1,9 @@
 #include "Opponent.h"
 
-Opponent::Opponent(Character^ character)
+using namespace System;
+
+Opponent::Opponent(Statistics^ stats)
+	: Character(stats)
 {
-	this->_character = character;
+	
 }

@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "MagicBlueberry.h"
 
 using namespace Items;

@@ -1,12 +1,15 @@
 #pragma once
 
-#include "Character.h"
+#include "Opponent.h"
 
-public ref class Warrior
-	: Character
+public ref class MadCharacter
+	: public Opponent
 {
+protected:
+	Character^ _character;
+
 public:
-	Warrior();
+	MadCharacter(Character^ character);
 
 	virtual int baseMeleeAttack() override;
 	virtual int baseRangeAttack() override;

@@ -1,10 +1,10 @@
 #include "MysteriousWizard.h"
 #include "StatisticsFactory.h"
 
-MysteriousWizard::MysteriousWizard(Character^ character) 
-	: Opponent(character)
+MysteriousWizard::MysteriousWizard(Statistics^ stats) 
+	: Opponent(stats)
 {
-	
+	this->Description = "Mysterious Wizard";
 }
 
 int MysteriousWizard::baseMeleeAttack()

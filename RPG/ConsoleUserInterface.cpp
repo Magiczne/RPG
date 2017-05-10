@@ -17,8 +17,8 @@ int ConsoleUserInterface::askQuestion(String^ question, List<String^>^ answers)
 
 	do
 	{
-		choice = Console::Read();
-	} while (choice > answers->Count - 1);
+		choice = Console::Read() - 48;
+	} while (choice > answers->Count - 1 && choice >= 0);
 
 	return choice;
 }

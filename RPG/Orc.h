@@ -6,7 +6,7 @@ public ref class Orc
 	: public Opponent
 {
 public:
-	Orc(Character^ character);
+	Orc(Statistics^ stats);
 
 	virtual int baseMeleeAttack() override;
 	virtual int baseRangeAttack() override;

@@ -11,14 +11,14 @@ protected:
 	Equipment^ _equipment;
 
 public: 
-	Character(System::String^ desc, Statistics^ stats);
+	Character(Statistics^ stats);
 
 	/// <summary>
 	/// Character description
 	/// </summary>
 	property System::String^ Description {
 		System::String^ get();
-		private: void set(System::String^ value);
+		protected: void set(System::String^ value);
 	}
 	
 	/// <summary>

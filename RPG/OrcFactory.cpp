@@ -9,9 +9,15 @@ Character^ OrcFactory::createCharacter()
 	auto str = random->Next(0, 10);
 
 	return gcnew Orc(
-		gcnew Character(
-			"Orc",
-			gcnew Statistics(100, 0, 0, 1, str, 10 - str, 0, random->Next(0, 10))
+		gcnew Statistics(
+			(10 - str) * 5, 
+			0, 
+			0, 
+			1, 
+			str,
+			10 - str,
+			0,
+			random->Next(0, 10)
 		)
 	);
 }

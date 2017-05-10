@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "MagicBoots.h"
 
 using namespace Items;
