@@ -193,6 +193,8 @@
     <ClCompile Include="IBattle.cpp" />
     <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="IEncounter.cpp" />
+    <ClCompile Include="IGame.cpp" />
+    <ClCompile Include="IMap.cpp" />
     <ClCompile Include="IShop.cpp" />
     <ClCompile Include="MadCharacter.cpp" />
     <ClCompile Include="MysteriousWizard.cpp" />

@@ -142,6 +142,27 @@
     <Filter Include="Pliki źródłowe\Items\Implementations\Wearable">
       <UniqueIdentifier>{ae98ebac-6490-4251-9838-ac026ebe31cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Game">
+      <UniqueIdentifier>{895015f4-a8da-4add-bd8a-7481e4e1a6a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Game\Abstraction">
+      <UniqueIdentifier>{0c1652db-3801-4569-81c3-ed10f8422fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Game\Implementation">
+      <UniqueIdentifier>{0286868f-5e85-419d-bc9d-a41c031fea97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Game">
+      <UniqueIdentifier>{7fffce85-044c-40a0-92f8-c3f58f3abbf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Game\Abstraction">
+      <UniqueIdentifier>{fbb15c7f-296d-4d2f-810e-61e46e64eaaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Locations">
+      <UniqueIdentifier>{b1f05546-51bd-4407-8a74-c5e4a9702942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Locations\Abstraction">
+      <UniqueIdentifier>{a2b3cf41-f565-4003-88e4-58b15a851a3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -219,12 +240,6 @@
     <ClInclude Include="PlayerRetreatException.h">
       <Filter>Pliki nagłówkowe\Exceptions\Player</Filter>
     </ClInclude>
-    <ClInclude Include="IGame.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="IMap.h">
-      <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
-    </ClInclude>
     <ClInclude Include="ILocation.h">
       <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
     </ClInclude>
@@ -260,6 +275,12 @@
     </ClInclude>
     <ClInclude Include="IUserInterface.h">
       <Filter>Pliki nagłówkowe\UserInterface\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Pliki nagłówkowe\Game\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IMap.h">
+      <Filter>Pliki nagłówkowe\Game\Abstraction</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -346,6 +367,12 @@
     </ClCompile>
     <ClCompile Include="IFood.cpp">
       <Filter>Pliki źródłowe\Items\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IGame.cpp">
+      <Filter>Pliki źródłowe\Game\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IMap.cpp">
+      <Filter>Pliki źródłowe\Game\Abstraction</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

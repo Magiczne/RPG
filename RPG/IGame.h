@@ -16,6 +16,11 @@ public:
 	/// <returns>Created map</returns>
 	virtual IMap^ createGame(int locations) abstract;
 
+	/// <summary>
+	/// Starts game
+	/// </summary>
+	virtual void start() abstract;
+
 
 	/// <summary>
 	/// User interface
