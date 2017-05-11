@@ -1,14 +1,14 @@
 #pragma once
 
-#include "Character.h"
-#include "UserInterface.h"
+#include "ICharacter.h"
+#include "IUserInterface.h"
 
 namespace Encounters
 {
-	public ref class Encounter abstract
+	public ref class IEncounter abstract
 	{
 	private:
-		UI::UserInterface^ _userInterface;
+		UI::IUserInterface^ _userInterface;
 
 	protected:
 		System::String^ _configFile;
@@ -19,15 +19,15 @@ namespace Encounters
 		/// </summary>
 		/// <param name="character">Character on whom encounter was proceeded</param>
 		/// <returns>Encounter succedeed</returns>
-		virtual bool proceed(Character^ character) abstract;
+		virtual bool proceed(ICharacter^ character) abstract;
 
 		/// <summary>
 		/// Interface used for the encounter
 		/// </summary>
-		property UI::UserInterface^ UserInterface 
+		property UI::IUserInterface^ UserInterface 
 		{
-			UI::UserInterface^ get();
-			void set(UI::UserInterface^ value);
+			UI::IUserInterface^ get();
+			void set(UI::IUserInterface^ value);
 		}
 	};
 }

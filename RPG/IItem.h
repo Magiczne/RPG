@@ -4,7 +4,7 @@
 
 namespace Items
 {
-	public ref class Item abstract
+	public ref class IItem abstract
 	{
 	private:
 		property System::String^ Name;

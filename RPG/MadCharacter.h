@@ -1,15 +1,16 @@
 #pragma once
 
-#include "Opponent.h"
+#include "ICharacter.h"
+#include "IOpponent.h"
 
 public ref class MadCharacter
-	: public Opponent
+	: public IOpponent
 {
 protected:
-	Character^ _character;
+	ICharacter^ _character;
 
 public:
-	MadCharacter(Character^ character);
+	MadCharacter(ICharacter^ character);
 
 	virtual int baseMeleeAttack() override;
 	virtual int baseRangeAttack() override;

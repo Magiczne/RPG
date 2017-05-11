@@ -19,15 +19,6 @@
     <Filter Include="Pliki źródłowe\Items">
       <UniqueIdentifier>{5f20ed50-8bc6-40b6-968c-a8c2cf5d6451}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\Items\Implementations">
-      <UniqueIdentifier>{a9a6f04e-f66d-4c53-808b-bd3b7469a964}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Items\Implementations\Food">
-      <UniqueIdentifier>{435bb232-d0fa-4c5e-a2e6-0f9e025476d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\Items\Implementations\Wearable">
-      <UniqueIdentifier>{ae98ebac-6490-4251-9838-ac026ebe31cf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\Character">
       <UniqueIdentifier>{613a6bdb-dc3c-4b5f-92e0-76e6794d28ed}</UniqueIdentifier>
     </Filter>
@@ -139,6 +130,18 @@
     <Filter Include="Pliki nagłówkowe\Exceptions\Player">
       <UniqueIdentifier>{eb11ee9a-898c-444b-9015-629d603e0e30}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Items\Abstraction">
+      <UniqueIdentifier>{2ce6cb8a-d450-4754-ab7d-ad4e3bad53c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations">
+      <UniqueIdentifier>{a9a6f04e-f66d-4c53-808b-bd3b7469a964}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations\Food">
+      <UniqueIdentifier>{435bb232-d0fa-4c5e-a2e6-0f9e025476d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Items\Implementations\Wearable">
+      <UniqueIdentifier>{ae98ebac-6490-4251-9838-ac026ebe31cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -162,47 +165,11 @@
     <ClInclude Include="MagicBoots.h">
       <Filter>Pliki nagłówkowe\Items\Implementation\Wearable</Filter>
     </ClInclude>
-    <ClInclude Include="Reward.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Rewards</Filter>
-    </ClInclude>
-    <ClInclude Include="Opponent.h">
-      <Filter>Pliki nagłówkowe\Character\Abstraction\Opponents</Filter>
-    </ClInclude>
-    <ClInclude Include="UserInterface.h">
-      <Filter>Pliki nagłówkowe\UserInterface\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Location.h">
-      <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Battle.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Encounter.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Shop.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Food.h">
-      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="Wearable.h">
-      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
-    </ClInclude>
     <ClInclude Include="Equipment.h">
       <Filter>Pliki nagłówkowe\Character\Implementation</Filter>
     </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Pliki nagłówkowe\Character\Abstraction</Filter>
-    </ClInclude>
     <ClInclude Include="ConsoleUserInterface.h">
       <Filter>Pliki nagłówkowe\UserInterface\Implementation</Filter>
-    </ClInclude>
-    <ClInclude Include="CharacterFactory.h">
-      <Filter>Pliki nagłówkowe\Character\Abstraction\Factories</Filter>
     </ClInclude>
     <ClInclude Include="GiantWasp.h">
       <Filter>Pliki nagłówkowe\Character\Implementation\Opponents</Filter>
@@ -252,6 +219,48 @@
     <ClInclude Include="PlayerRetreatException.h">
       <Filter>Pliki nagłówkowe\Exceptions\Player</Filter>
     </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="IMap.h">
+      <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="ILocation.h">
+      <Filter>Pliki nagłówkowe\Locations\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IEncounter.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IBattle.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IShop.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IOpponent.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction\Opponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ICharacter.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="ICharacterFactory.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="IReward.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Rewards</Filter>
+    </ClInclude>
+    <ClInclude Include="IFood.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IItem.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IWearable.h">
+      <Filter>Pliki nagłówkowe\Items\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="IUserInterface.h">
+      <Filter>Pliki nagłówkowe\UserInterface\Abstraction</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -259,12 +268,6 @@
     </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Food.cpp">
-      <Filter>Pliki źródłowe\Items</Filter>
-    </ClCompile>
-    <ClCompile Include="Wearable.cpp">
-      <Filter>Pliki źródłowe\Items</Filter>
     </ClCompile>
     <ClCompile Include="MagicBlueberry.cpp">
       <Filter>Pliki źródłowe\Items\Implementations\Food</Filter>
@@ -284,17 +287,11 @@
     <ClCompile Include="MagicBoots.cpp">
       <Filter>Pliki źródłowe\Items\Implementations\Wearable</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
-      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
-    </ClCompile>
     <ClCompile Include="Equipment.cpp">
       <Filter>Pliki źródłowe\Character\Implementation</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleUserInterface.cpp">
       <Filter>Pliki źródłowe\UserInterface\Implementation</Filter>
-    </ClCompile>
-    <ClCompile Include="Opponent.cpp">
-      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
     </ClCompile>
     <ClCompile Include="Orc.cpp">
       <Filter>Pliki źródłowe\Character\Implementation\Opponents</Filter>
@@ -320,20 +317,35 @@
     <ClCompile Include="StatisticsFactory.cpp">
       <Filter>Pliki źródłowe\Character\Implementation\Statistics</Filter>
     </ClCompile>
-    <ClCompile Include="Encounter.cpp">
-      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
-    </ClCompile>
-    <ClCompile Include="Battle.cpp">
-      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
-    </ClCompile>
-    <ClCompile Include="Shop.cpp">
-      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
-    </ClCompile>
     <ClCompile Include="BasicBattle.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
     </ClCompile>
     <ClCompile Include="BattleWithRetreat.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
+    </ClCompile>
+    <ClCompile Include="MadCharacter.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Opponents</Filter>
+    </ClCompile>
+    <ClCompile Include="IOpponent.cpp">
+      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="ICharacter.cpp">
+      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IBattle.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IEncounter.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IShop.cpp">
+      <Filter>Pliki źródłowe\Encounters\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IWearable.cpp">
+      <Filter>Pliki źródłowe\Items\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IFood.cpp">
+      <Filter>Pliki źródłowe\Items\Abstraction</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -9,12 +9,12 @@ using namespace System::IO;
 using namespace System::Collections::Generic;
 
 BasicBattle::BasicBattle()
-	: Battle()
+	: IBattle()
 {
 	
 }
 
-void BasicBattle::fight(Character^ character)
+void BasicBattle::fight(ICharacter^ character)
 {
 	auto lines = File::ReadAllLines(this->_configFile);
 

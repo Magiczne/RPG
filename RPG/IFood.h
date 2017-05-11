@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Item.h"
+#include "IItem.h"
 
 namespace Items
 {
-	public ref class Food abstract : public Item
+	public ref class IFood abstract 
+		: public IItem
 	{
 	public:
 

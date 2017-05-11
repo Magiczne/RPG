@@ -13,12 +13,12 @@ using namespace System::IO;
 using namespace System::Collections::Generic;
 
 BattleWithRetreat::BattleWithRetreat()
-	: Battle()
+	: IBattle()
 {
 	
 }
 
-void BattleWithRetreat::fight(Character^ character)
+void BattleWithRetreat::fight(ICharacter^ character)
 {
 	auto lines = File::ReadAllLines(this->_configFile);
 
@@ -115,11 +115,11 @@ void BattleWithRetreat::fight(Character^ character)
 	}
 }
 
-bool BattleWithRetreat::proceed(Character^ character)
+bool BattleWithRetreat::proceed(ICharacter^ character)
 {
 	try
 	{
-		return Battle::proceed(character);
+		return IBattle::proceed(character);
 	}
 	catch(PlayerRetreatException^)
 	{

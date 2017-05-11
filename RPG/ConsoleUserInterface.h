@@ -1,11 +1,11 @@
 #pragma once
 
-#include "UserInterface.h"
+#include "IUserInterface.h"
 
 namespace UI
 {
 	public ref class ConsoleUserInterface 
-		: public UserInterface
+		: public IUserInterface
 	{
 	public:
 		/// <summary>
@@ -14,13 +14,13 @@ namespace UI
 		/// <param name="question">Question to ask</param>
 		/// <param name="answers">Answers for the question</param>
 		/// <returns>Chosen answer numer</returns>
-		virtual int askQuestion(System::String^ question, System::Collections::Generic::List<System::String^>^ answers) override;
+		virtual int askQuestion(System::String^ question, System::Collections::Generic::List<System::String^>^ answers);
 
 		/// <summary>
 		/// Shows message for the user in the console window
 		/// </summary>
 		/// <param name="message"></param>
-		virtual void showMessage(System::String^ message) override;
+		virtual void showMessage(System::String^ message);
 
 	private:
 

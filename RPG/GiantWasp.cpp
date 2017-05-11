@@ -1,7 +1,7 @@
 #include "GiantWasp.h"
 
 GiantWasp::GiantWasp(Statistics^ stats) 
-	: Opponent(stats)
+	: IOpponent(stats)
 {
 	this->Description = "Giant Wasp";
 }

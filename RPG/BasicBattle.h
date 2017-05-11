@@ -1,15 +1,16 @@
 #pragma once
 
-#include "Battle.h"
+#include "ICharacter.h"
+#include "IBattle.h"
 
 namespace Encounters
 {
 	public ref class BasicBattle abstract
-		: public Battle
+		: public IBattle
 	{
 	public:
 		BasicBattle();
 
-		virtual void fight(Character^ character) override;
+		virtual void fight(ICharacter^ character) override;
 	};
 }

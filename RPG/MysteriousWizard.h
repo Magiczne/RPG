@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Opponent.h"
+#include "IOpponent.h"
 
 public ref class MysteriousWizard 
-	: public Opponent
+	: public IOpponent
 {
 public:
 	MysteriousWizard(Statistics^ stats);

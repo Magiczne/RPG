@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Character.h"
+#include "ICharacter.h"
 
 public ref class Warrior
-	: Character
+	: ICharacter
 {
 public:
 	Warrior();

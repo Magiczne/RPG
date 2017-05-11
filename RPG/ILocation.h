@@ -1,24 +1,25 @@
 #pragma once
 
-#include "Encounter.h"
+#include "IEncounter.h"
+#include "ICharacter.h"
 
 namespace Locations
 {
-	public ref class Location abstract
+	public ref class ILocation abstract
 	{
 	private:
 		System::String^ _name;
 		System::String^ _description;
 		System::String^ _configFile;
-		System::Collections::Generic::List<Encounters::Encounter^>^ _encounters;
-		System::Collections::Generic::List<Location^>^ _neighbourLocations;
+		System::Collections::Generic::List<Encounters::IEncounter^>^ _encounters;
+		System::Collections::Generic::List<ILocation^>^ _neighbourLocations;
 
 	public:
 
 		/// <summary>
 		/// Starts plot of the location
 		/// </summary>
-		virtual void run() abstract;
+		virtual ILocation^ run(ICharacter^ character) abstract;
 
 		/// <summary>
 		/// Name of the location
@@ -41,17 +42,17 @@ namespace Locations
 		/// <summary>
 		/// Encounters in the location
 		/// </summary>
-		property System::Collections::Generic::List<Encounters::Encounter^>^ Encounters
+		property System::Collections::Generic::List<Encounters::IEncounter^>^ Encounters
 		{
-			System::Collections::Generic::List<Encounters::Encounter^>^ get();
+			System::Collections::Generic::List<Encounters::IEncounter^>^ get();
 		}
 
 		/// <summary>
 		/// Neighbour locations
 		/// </summary>
-		property System::Collections::Generic::List<Location^>^ NeighbourLocations
+		property System::Collections::Generic::List<ILocation^>^ NeighbourLocations
 		{
-			System::Collections::Generic::List<Location^>^ get();
+			System::Collections::Generic::List<ILocation^>^ get();
 		}
 	};
 }

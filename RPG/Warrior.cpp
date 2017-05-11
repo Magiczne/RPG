@@ -3,7 +3,7 @@
 using namespace System;
 
 Warrior::Warrior() 
-	: Character(gcnew Statistics(25, 0, 0, 2, 4, 5, 0, 0))
+	: ICharacter(gcnew Statistics(25, 0, 0, 2, 4, 5, 0, 0))
 {
 	this->Description = "Warrior";
 }

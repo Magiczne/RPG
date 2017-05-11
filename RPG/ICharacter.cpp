@@ -1,10 +1,10 @@
-#include "Character.h"
+#include "ICharacter.h"
 
 #include "EquipmentOutOfRangeException.h"
 
 using namespace System;
 
-Character::Character(Statistics^ stats)
+ICharacter::ICharacter(Statistics^ stats)
 {
 	this->_statistics = stats;
 	this->_equipment = gcnew Equipment;
@@ -12,27 +12,27 @@ Character::Character(Statistics^ stats)
 	this->_statistics->add(gcnew Statistics(0, 0, 0, 0, 0, 0, 0, 100));
 }
 
-String^ Character::Description::get()
+String^ ICharacter::Description::get()
 {
 	return this->_description;
 }
 
-void Character::Description::set(String^ value)
+void ICharacter::Description::set(String^ value)
 {
 	this->_description = value;
 }
 
-int Character::getMaxHp()
+int ICharacter::getMaxHp()
 {
 	return this->_statistics->Toughness * 5;
 }
 
-int Character::getMaxMana()
+int ICharacter::getMaxMana()
 {
 	return this->_statistics->Intelligence * 5;
 }
 
-void Character::use(int index)
+void ICharacter::use(int index)
 {
 	try
 	{
@@ -44,7 +44,7 @@ void Character::use(int index)
 	}
 }
 
-bool Character::wear(int index)
+bool ICharacter::wear(int index)
 {
 	try
 	{
@@ -57,7 +57,7 @@ bool Character::wear(int index)
 	}
 }
 
-bool Character::unWear(int index)
+bool ICharacter::unWear(int index)
 {
 	try 
 	{
@@ -70,7 +70,7 @@ bool Character::unWear(int index)
 	}
 }
 
-Statistics^ Character::getStatistics()
+Statistics^ ICharacter::getStatistics()
 {
 	return this->_statistics;
 }

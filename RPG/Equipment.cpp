@@ -8,8 +8,8 @@ using namespace Items;
 
 Equipment::Equipment()
 {
-	_toUse = gcnew List<Item^>();
-	_inUse = gcnew List<Item^>();
+	_toUse = gcnew List<IItem^>();
+	_inUse = gcnew List<IItem^>();
 }
 
 Statistics^ Equipment::use(int index)
@@ -78,12 +78,12 @@ Statistics^ Equipment::unWear(int index)
 	throw gcnew EquipmentOutOfRangeException;
 }
 
-void Equipment::add(Item^ item)
+void Equipment::add(IItem^ item)
 {
 	_toUse->Add(item);
 }
 
-void Equipment::remove(Item^ item)
+void Equipment::remove(IItem^ item)
 {
 	_toUse->Remove(item);
 }

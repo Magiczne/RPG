@@ -1,16 +1,17 @@
 #pragma once
 
-#include "Battle.h"
+#include "ICharacter.h"
+#include "IBattle.h"
 
 namespace Encounters
 {
 	public ref class BattleWithRetreat
-		: public Battle
+		: public IBattle
 	{
 	public:
 		BattleWithRetreat();
 
-		virtual void fight(Character^ character) override;
-		virtual bool proceed(Character^ character) override;
+		virtual void fight(ICharacter^ character) override;
+		virtual bool proceed(ICharacter^ character) override;
 	};
 }

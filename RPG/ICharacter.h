@@ -3,7 +3,7 @@
 #include "Equipment.h"
 #include "Statistics.h"
 
-public ref class Character abstract
+public ref class ICharacter abstract
 {
 protected:
 	System::String^ _description;
@@ -11,7 +11,7 @@ protected:
 	Equipment^ _equipment;
 
 public: 
-	Character(Statistics^ stats);
+	ICharacter(Statistics^ stats);
 
 	/// <summary>
 	/// Character description

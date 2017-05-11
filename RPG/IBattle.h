@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Opponent.h"
-#include "Encounter.h"
-#include "Reward.h"
+#include "IEncounter.h"
+#include "IOpponent.h"
+#include "IReward.h"
 
 namespace Encounters
 {
@@ -15,30 +15,30 @@ namespace Encounters
 	/// 6. Ranged Attack
 	/// 7. Block Attack
 	/// 8-n. Special
-	public ref class Battle abstract
-		: public Encounter
+	public ref class IBattle abstract
+		: public IEncounter
 	{
 	private:
 		System::String^ _name;
 		System::String^ _description;
-		Rewards::Reward^ _reward;
-		System::Collections::Generic::List<Opponent^>^ _opponents;
+		Rewards::IReward^ _reward;
+		System::Collections::Generic::List<IOpponent^>^ _opponents;
 
 	public:
-		Battle();
+		IBattle();
 
 		/// <summary>
 		/// Starts a fight with character
 		/// </summary>
 		/// <param name="character">Character to fight with</param>
-		virtual void fight(Character^ character) abstract;
+		virtual void fight(ICharacter^ character) abstract;
 
 		/// <summary>
 		/// Process an encounter on player
 		/// </summary>
 		/// <param name="character">Character on whom encounter was proceeded</param>
 		/// <returns>Encounter succedeed</returns>
-		virtual bool proceed(Character^ character) override;
+		virtual bool proceed(ICharacter^ character) override;
 
 		/// <summary>
 		/// Battle name
@@ -61,18 +61,18 @@ namespace Encounters
 		/// <summary>
 		/// Battle reward
 		/// </summary>
-		property Rewards::Reward^ Reward
+		property Rewards::IReward^ Reward
 		{
-			Rewards::Reward^ get();
-			void set(Rewards::Reward^ value);
+			Rewards::IReward^ get();
+			void set(Rewards::IReward^ value);
 		}
 
 		/// <summary>
 		/// Opponents in the battle
 		/// </summary>
-		property System::Collections::Generic::List<Opponent^>^ Opponents 
+		property System::Collections::Generic::List<IOpponent^>^ Opponents 
 		{
-			System::Collections::Generic::List<Opponent^>^ get();
+			System::Collections::Generic::List<IOpponent^>^ get();
 		}
 	};
 }

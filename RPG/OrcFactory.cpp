@@ -3,7 +3,7 @@
 
 using namespace System;
 
-Character^ OrcFactory::createCharacter()
+ICharacter^ OrcFactory::createCharacter()
 {
 	auto random = gcnew Random();
 	auto str = random->Next(0, 10);

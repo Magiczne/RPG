@@ -1,10 +1,12 @@
 #pragma once
 
-#include "Wearable.h"
+#include "IWearable.h"
+#include "Statistics.h"
 
 namespace Items
 {
-	public ref class Helmet : public Wearable
+	public ref class Helmet 
+		: public IWearable
 	{
 	public:
 		/// <summary>

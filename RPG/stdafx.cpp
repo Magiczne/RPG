@@ -1,7 +1,0 @@
-// stdafx.cpp: plik Ÿród³owy , który zawiera tylko standardowe zawarcia
-// RPG.pch bêdzie wstêpnie skompilowanym nag³ówkiem
-// stdafx.obj bêdzie zawieraæ informacje typu wstêpnie skompilowanego
-
-#include "stdafx.h"
-
-

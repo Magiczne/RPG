@@ -3,7 +3,7 @@
 
 using namespace System;
 
-Character^ GiantWaspFactory::createCharacter()
+ICharacter^ GiantWaspFactory::createCharacter()
 {
 	return gcnew GiantWasp(
 		gcnew Statistics(

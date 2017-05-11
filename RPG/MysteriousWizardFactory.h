@@ -1,10 +1,11 @@
 #pragma once
 
-#include "CharacterFactory.h"
+#include "ICharacter.h"
+#include "ICharacterFactory.h"
 
 public ref class MysteriousWizardFactory
-	: public CharacterFactory
+	: public ICharacterFactory
 {
 public:
-	virtual Character^ createCharacter();
+	virtual ICharacter^ createCharacter();
 };

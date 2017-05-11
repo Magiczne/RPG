@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Character.h"
+#include "ICharacter.h"
 
-interface class CharacterFactory
+interface class ICharacterFactory
 {
 	/// <summary>
 	/// Creates a character
 	/// </summary>
 	/// <returns>Created character</returns>
-	Character^ createCharacter();
+	ICharacter^ createCharacter();
 };

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Item.h"
+#include "IItem.h"
 
 public ref class Equipment
 {
 private:
 	int _maxCapacity = 4;
-	System::Collections::Generic::List<Items::Item^>^ _toUse;
-	System::Collections::Generic::List<Items::Item^>^ _inUse;
+	System::Collections::Generic::List<Items::IItem^>^ _toUse;
+	System::Collections::Generic::List<Items::IItem^>^ _inUse;
 
 public:
 	Equipment();
@@ -42,11 +42,11 @@ public:
 	/// Adds item to the _toUse list
 	/// </summary>
 	/// <param name="item">Specified tem</param>
-	void add(Items::Item^ item);
+	void add(Items::IItem^ item);
 
 	/// <summary>
 	/// Removes item from the _toUse list
 	/// </summary>
 	/// <param name="item">Specified item</param>
-	void remove(Items::Item^ item);
+	void remove(Items::IItem^ item);
 };

@@ -2,7 +2,7 @@
 #include "StatisticsFactory.h"
 
 MysteriousWizard::MysteriousWizard(Statistics^ stats) 
-	: Opponent(stats)
+	: IOpponent(stats)
 {
 	this->Description = "Mysterious Wizard";
 }

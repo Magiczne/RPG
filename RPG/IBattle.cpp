@@ -1,4 +1,4 @@
-#include "Battle.h"
+#include "IBattle.h"
 
 #include "PlayerDeadException.h"
 
@@ -9,7 +9,7 @@ using namespace System::Collections::Generic;
 using namespace Encounters;
 using namespace Rewards;
 
-Battle::Battle()
+IBattle::IBattle()
 {
 	auto lines = File::ReadAllLines(this->_configFile);
 
@@ -17,7 +17,7 @@ Battle::Battle()
 	this->Description = lines[1];
 }
 
-bool Battle::proceed(Character^ character)
+bool IBattle::proceed(ICharacter^ character)
 {
 	try
 	{
@@ -33,22 +33,22 @@ bool Battle::proceed(Character^ character)
 
 #pragma region Getters
 
-String^ Battle::Name::get()
+String^ IBattle::Name::get()
 {
 	return this->_name;
 }
 
-String^ Battle::Description::get()
+String^ IBattle::Description::get()
 {
 	return this->_description;
 }
 
-Reward^ Battle::Reward::get()
+IReward^ IBattle::Reward::get()
 {
 	return this->_reward;
 }
 
-List<Opponent^>^ Battle::Opponents::get()
+List<IOpponent^>^ IBattle::Opponents::get()
 {
 	return this->_opponents;
 }
@@ -57,17 +57,17 @@ List<Opponent^>^ Battle::Opponents::get()
 
 #pragma region Setters
 
-void Battle::Name::set(String^ value)
+void IBattle::Name::set(String^ value)
 {
 	this->_name = value;
 }
 
-void Battle::Description::set(String^ value)
+void IBattle::Description::set(String^ value)
 {
 	this->_description = value;
 }
 
-void Battle::Reward::set(Rewards::Reward^ value)
+void IBattle::Reward::set(Rewards::IReward^ value)
 {
 	this->_reward = value;
 }

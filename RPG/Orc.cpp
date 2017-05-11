@@ -1,7 +1,7 @@
 #include "Orc.h"
 
 Orc::Orc(Statistics^ stats) 
-	: Opponent(stats)
+	: IOpponent(stats)
 {
 	this->Description = "Orc";
 }

@@ -2,7 +2,7 @@
 
 namespace UI
 {
-	public interface class UserInterface
+	public interface class IUserInterface
 	{
 		/// <summary>
 		/// Asks the user a question with answers and gets the answer from user

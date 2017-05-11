@@ -1,18 +1,18 @@
 #pragma once
 
-#include "Character.h"
+#include "ICharacter.h"
 
 namespace Encounters
 {
 	namespace Rewards
 	{
-		public interface class Reward
+		public interface class IReward
 		{
 			/// <summary>
 			/// Applies reward to specified character
 			/// </summary>
 			/// <param name="character">Character that we want to apply reward for</param>
-			void apply(Character^ character);
+			void apply(ICharacter^ character);
 		};
 	}
 }
