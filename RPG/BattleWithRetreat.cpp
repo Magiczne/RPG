@@ -44,13 +44,13 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		//Chosing opponent
 		auto opponentList = gcnew List<String^>();
 
-		for each(auto opponent in Opponents)
+		for each(auto opponent in this->Opponents)
 		{
 			opponentList->Add(opponent->Description);
 		}
 
 		auto opponentNumber = this->UserInterface->askQuestion(chooseOpponentQuestion, opponentList);
-		auto chosenOpponent = Opponents[opponentNumber];
+		auto chosenOpponent = this->Opponents[opponentNumber];
 
 		//Fighting
 		auto actionAnswer = this->UserInterface->askQuestion(actionQuestion, actionAnswers);
