@@ -13,7 +13,7 @@ public:
 	/// Runs map with specified character
 	/// </summary>
 	/// <param name="character">Character on whom map to be ran</param>
-	void run(ICharacter^ character);
+	virtual void run(ICharacter^ character) abstract;
 
 	/// <summary>
 	/// Starting location
