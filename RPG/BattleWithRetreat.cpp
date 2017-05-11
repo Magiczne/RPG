@@ -59,12 +59,12 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		{
 		case 0:		//Melee attack
 			attackPower = safe_cast<int>(attackModifier * character->baseMeleeAttack() - opponentBlockPower);
-			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+			chosenOpponent->Stats->substract(StatisticsFactory::onlyHp(attackPower));
 
-			if (chosenOpponent->getStatistics()->HP > 0)
+			if (chosenOpponent->Stats->HP > 0)
 			{
 				attackPower = safe_cast<int>(attackModifier * chosenOpponent->baseMeleeAttack() - playerBlockPower);
-				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+				character->Stats->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
 			playerBlockPower = 0;
@@ -72,12 +72,12 @@ void BattleWithRetreat::fight(ICharacter^ character)
 			break;
 		case 1:		//Ranged attack
 			attackPower = safe_cast<int>(attackModifier * character->baseRangeAttack());
-			chosenOpponent->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+			chosenOpponent->Stats->substract(StatisticsFactory::onlyHp(attackPower));
 
-			if (chosenOpponent->getStatistics()->HP > 0)
+			if (chosenOpponent->Stats->HP > 0)
 			{
 				attackPower = safe_cast<int>(attackModifier * chosenOpponent->baseRangeAttack());
-				character->getStatistics()->substract(StatisticsFactory::onlyHp(attackPower));
+				character->Stats->substract(StatisticsFactory::onlyHp(attackPower));
 			}
 
 			playerBlockPower = 0;
@@ -95,7 +95,7 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		}
 
 		//If opponent dead remove
-		if (chosenOpponent->getStatistics()->HP <= 0)
+		if (chosenOpponent->Stats->HP <= 0)
 		{
 			this->Opponents->Remove(chosenOpponent);
 		}
@@ -107,7 +107,7 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		}
 
 		//If player dead return and throw
-		if (character->getStatistics()->HP <= 0)
+		if (character->Stats->HP <= 0)
 		{
 			throw gcnew PlayerDeadException;
 			return;

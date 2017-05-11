@@ -34,8 +34,7 @@ namespace UI
 		static ConsoleUserInterface _instance;
 
 		ConsoleUserInterface();
-		ConsoleUserInterface(const ConsoleUserInterface%) = delete;
-		ConsoleUserInterface% operator =(const ConsoleUserInterface%) = delete;
+		ConsoleUserInterface(const ConsoleUserInterface%);
 
 		/// <summary>
 		/// Writes text centered

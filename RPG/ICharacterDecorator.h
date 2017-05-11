@@ -1,25 +1,23 @@
 #pragma once
 
-#include "Equipment.h"
-#include "Statistics.h"
+#include "ICharacter.h"
 
-public ref class ICharacter abstract
+public ref class ICharacterDecorator abstract
+	: public ICharacter
 {
-protected:
-	System::String^ _description;
-	Statistics^ _statistics;
-	Equipment^ _equipment;
+private:
+	ICharacter^ _character;
+	System::String^ _title;
 
-public: 
-	ICharacter(Statistics^ stats);
+public:
+	ICharacterDecorator(ICharacter^ character);
 
 	/// <summary>
-	/// Character description
+	/// Character descriptin
 	/// </summary>
 	property System::String^ Description
 	{
-		virtual System::String^ get();
-		protected: void set(System::String^ value);
+		virtual System::String^ get() override;
 	}
 
 	/// <summary>
@@ -28,7 +26,7 @@ public:
 	/// <returns>Character statistics</returns>
 	virtual property Statistics^ Stats
 	{
-		Statistics^ get();
+		Statistics^ get() override;
 	}
 
 	/// <summary>
@@ -36,16 +34,16 @@ public:
 	/// </summary>
 	virtual property Equipment^ Eq
 	{
-		Equipment^ get();
+		Equipment^ get() override;
 	}
-	
+
 	/// <summary>
 	/// Maximum Health Points
 	/// </summary>
 	/// <returns>Maximum health points</returns>
 	virtual property int MaxHp
 	{
-		int get();
+		int get() override;
 	}
 
 	/// <summary>
@@ -54,32 +52,32 @@ public:
 	/// <returns>Maximum Mana Points</returns>
 	virtual property int MaxMana
 	{
-		int get();
+		int get() override;
 	}
 
 	/// <summary>
 	/// Gets value of basic melee attack
 	/// </summary>
 	/// <returns>Value of basic melee attack</returns>
-	virtual int baseMeleeAttack() abstract;
+	virtual int baseMeleeAttack() override;
 
 	/// <summary>
 	/// Gets value of basic ranged attack
 	/// </summary>
 	/// <returns>Value of basic ranged attack</returns>
-	virtual int baseRangeAttack() abstract;
+	virtual int baseRangeAttack() override;
 
 	/// <summary>
 	/// Gets value of blocked damage
 	/// </summary>
 	/// <returns>Value of blocked damage</returns>
-	virtual int blockAttack() abstract;
+	virtual int blockAttack() override;
 
 	/// <summary>
 	/// Uses item on specified index or if it is wearable wears it
 	/// </summary>
 	/// <param name="index">Index of item in toUse list in equipment</param>
-	virtual void use(int index);
+	virtual void use(int index) override;
 
 	/// <summary>
 	/// Wears item on specified index.
@@ -88,7 +86,7 @@ public:
 	/// </summary>
 	/// <param name="index">Index of item in toUse list in equipment</param>
 	/// <returns>Item has been worn</returns>
-	virtual bool wear(int index);
+	virtual bool wear(int index) override;
 
 	/// <summary>
 	/// Takes off item on specified index.
@@ -97,5 +95,5 @@ public:
 	/// </summary>
 	/// <param name="index">Index of item in inUse list in equipment</param>
 	/// <returns>Item has been taken off</returns>
-	virtual bool unWear(int index);
+	virtual bool unWear(int index) override;
 };

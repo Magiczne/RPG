@@ -4,6 +4,13 @@ using namespace System;
 using namespace System::Collections::Generic;
 using namespace UI;
 
+ConsoleUserInterface::ConsoleUserInterface() {}
+
+ConsoleUserInterface::ConsoleUserInterface(const ConsoleUserInterface%)
+{
+	throw gcnew InvalidOperationException("Singleton cannot be coppied");
+}
+
 ConsoleUserInterface^ ConsoleUserInterface::Instance::get()
 {
 	return %ConsoleUserInterface::_instance;

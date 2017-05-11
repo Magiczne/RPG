@@ -143,12 +143,14 @@
     <ClInclude Include="Apple.h" />
     <ClInclude Include="BasicBattle.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GoldReward.h" />
     <ClInclude Include="IBattle.h" />
     <ClInclude Include="BattleWithRetreat.h" />
     <ClInclude Include="Bread.h" />
     <ClInclude Include="ICharacter.h" />
     <ClInclude Include="Chestplate.h" />
     <ClInclude Include="ConsoleUserInterface.h" />
+    <ClInclude Include="ICharacterDecorator.h" />
     <ClInclude Include="IEncounter.h" />
     <ClInclude Include="Equipment.h" />
     <ClInclude Include="EquipmentOutOfRangeException.h" />
@@ -161,6 +163,7 @@
     <ClInclude Include="IItem.h" />
     <ClInclude Include="ItemNotWearableException.h" />
     <ClInclude Include="ILocation.h" />
+    <ClInclude Include="ItemReward.h" />
     <ClInclude Include="MadCharacter.h" />
     <ClInclude Include="IMap.h" />
     <ClInclude Include="Map.h" />
@@ -174,6 +177,8 @@
     <ClInclude Include="PlayerDeadException.h" />
     <ClInclude Include="PlayerRetreatException.h" />
     <ClInclude Include="StatisticsFactory.h" />
+    <ClInclude Include="TitledCharacter.h" />
+    <ClInclude Include="TitleReward.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="IReward.h" />
     <ClInclude Include="IShop.h" />
@@ -190,6 +195,8 @@
     <ClCompile Include="Chestplate.cpp" />
     <ClCompile Include="ConsoleUserInterface.cpp" />
     <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="GoldReward.cpp" />
+    <ClCompile Include="ICharacterDecorator.cpp" />
     <ClCompile Include="IFood.cpp" />
     <ClCompile Include="GiantWasp.cpp" />
     <ClCompile Include="GiantWaspFactory.cpp" />
@@ -201,6 +208,7 @@
     <ClCompile Include="ILocation.cpp" />
     <ClCompile Include="IMap.cpp" />
     <ClCompile Include="IShop.cpp" />
+    <ClCompile Include="ItemReward.cpp" />
     <ClCompile Include="MadCharacter.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MysteriousWizard.cpp" />
@@ -213,6 +221,8 @@
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
+    <ClCompile Include="TitledCharacter.cpp" />
+    <ClCompile Include="TitleReward.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="IWearable.cpp" />
   </ItemGroup>

@@ -17,17 +17,27 @@ String^ ICharacter::Description::get()
 	return this->_description;
 }
 
+Equipment^ ICharacter::Eq::get()
+{
+	return this->_equipment;
+}
+
+Statistics^ ICharacter::Stats::get()
+{
+	return this->_statistics;
+}
+
 void ICharacter::Description::set(String^ value)
 {
 	this->_description = value;
 }
 
-int ICharacter::getMaxHp()
+int ICharacter::MaxHp::get()
 {
 	return this->_statistics->Toughness * 5;
 }
 
-int ICharacter::getMaxMana()
+int ICharacter::MaxMana::get()
 {
 	return this->_statistics->Intelligence * 5;
 }
@@ -68,9 +78,4 @@ bool ICharacter::unWear(int index)
 	{
 		return false;
 	}
-}
-
-Statistics^ ICharacter::getStatistics()
-{
-	return this->_statistics;
 }

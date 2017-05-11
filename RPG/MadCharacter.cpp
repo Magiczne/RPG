@@ -1,7 +1,7 @@
 #include "MadCharacter.h"
 
 MadCharacter::MadCharacter(ICharacter^ character) 
-	: IOpponent(character->getStatistics())
+	: IOpponent(character->Stats)
 {
 	this->_character = character;
 }

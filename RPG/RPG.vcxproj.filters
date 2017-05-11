@@ -169,6 +169,12 @@
     <Filter Include="Pliki źródłowe\Game\Implementation">
       <UniqueIdentifier>{522461cd-c052-4770-8094-74d66acef249}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Implementation\Rewards">
+      <UniqueIdentifier>{5f336527-0499-4b10-87f4-5877d5e427a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Encounters\Implementation\Rewards">
+      <UniqueIdentifier>{67309146-f296-48c8-942f-340508177d0d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -300,6 +306,21 @@
     <ClInclude Include="Map.h">
       <Filter>Pliki nagłówkowe\Game\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="GoldReward.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Rewards</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemReward.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Rewards</Filter>
+    </ClInclude>
+    <ClInclude Include="TitledCharacter.h">
+      <Filter>Pliki nagłówkowe\Character\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="ICharacterDecorator.h">
+      <Filter>Pliki nagłówkowe\Character\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleReward.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Rewards</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -400,6 +421,21 @@
     </ClCompile>
     <ClCompile Include="Map.cpp">
       <Filter>Pliki źródłowe\Game\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="GoldReward.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Rewards</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemReward.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Rewards</Filter>
+    </ClCompile>
+    <ClCompile Include="TitledCharacter.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ICharacterDecorator.cpp">
+      <Filter>Pliki źródłowe\Character\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleReward.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Rewards</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
