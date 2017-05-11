@@ -36,19 +36,19 @@ public:
 	/// <summary>
 	/// Gets value of basic melee attack
 	/// </summary>
-	/// <returns>Damage of basic melee attack</returns>
+	/// <returns>Value of basic melee attack</returns>
 	virtual int baseMeleeAttack() abstract;
 
 	/// <summary>
 	/// Gets value of basic ranged attack
 	/// </summary>
-	/// <returns>Damage of basic ranged attack</returns>
+	/// <returns>Value of basic ranged attack</returns>
 	virtual int baseRangeAttack() abstract;
 
 	/// <summary>
 	/// Gets value of blocked damage
 	/// </summary>
-	/// <returns>Damage blocked by block</returns>
+	/// <returns>Value of blocked damage</returns>
 	virtual int blockAttack() abstract;
 
 	/// <summary>

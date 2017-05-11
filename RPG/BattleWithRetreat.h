@@ -14,11 +14,13 @@ namespace Encounters
 		/// <summary>
 		/// Starts a fight with character
 		/// </summary>
+		/// <exception cref="PlayerDeadException"></exception>
+		/// <exception cref="PlayerRetreatException"></exception>
 		/// <param name="character">Character to fight with</param>
 		virtual void fight(ICharacter^ character) override;
 
 		/// <summary>
-		/// Process an encounter on player
+		/// Process an encounter on player.
 		/// Returns false if character dies
 		/// </summary>
 		/// <param name="character">Character on whom encounter was proceeded</param>

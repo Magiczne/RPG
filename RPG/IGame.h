@@ -21,7 +21,6 @@ public:
 	/// </summary>
 	virtual void start() abstract;
 
-
 	/// <summary>
 	/// User interface
 	/// </summary>

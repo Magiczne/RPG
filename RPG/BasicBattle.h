@@ -14,6 +14,7 @@ namespace Encounters
 		/// <summary>
 		/// Starts a fight with character
 		/// </summary>
+		/// <exception cref="PlayerDeadException"></exception>
 		/// <param name="character">Character to fight with</param>
 		virtual void fight(ICharacter^ character) override;
 	};
