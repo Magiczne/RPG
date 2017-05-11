@@ -4,6 +4,11 @@ using namespace System;
 using namespace System::Collections::Generic;
 using namespace UI;
 
+ConsoleUserInterface^ ConsoleUserInterface::Instance::get()
+{
+	return %ConsoleUserInterface::_instance;
+}
+
 int ConsoleUserInterface::askQuestion(String^ question, List<String^>^ answers)
 {
 	this->writeCentered(question);

@@ -166,6 +166,9 @@
     <Filter Include="Pliki zasobów\Templates">
       <UniqueIdentifier>{4b78136c-3418-4860-923b-aef9afcaa9b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Game\Implementation">
+      <UniqueIdentifier>{522461cd-c052-4770-8094-74d66acef249}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -290,6 +293,9 @@
     </ClInclude>
     <ClInclude Include="IMap.h">
       <Filter>Pliki nagłówkowe\Game\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Pliki nagłówkowe\Game\Implementation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

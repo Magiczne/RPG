@@ -22,7 +22,20 @@ namespace UI
 		/// <param name="message"></param>
 		virtual void showMessage(System::String^ message);
 
+		/// <summary>
+		/// Instance of the Interface
+		/// </summary>
+		static property ConsoleUserInterface^ Instance 
+		{
+			ConsoleUserInterface^ get();
+		}
+
 	private:
+		static ConsoleUserInterface _instance;
+
+		ConsoleUserInterface();
+		ConsoleUserInterface(const ConsoleUserInterface%) = delete;
+		ConsoleUserInterface% operator =(const ConsoleUserInterface%) = delete;
 
 		/// <summary>
 		/// Writes text centered

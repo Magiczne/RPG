@@ -27,5 +27,6 @@ public:
 	property UI::IUserInterface^ UserInterface
 	{
 		UI::IUserInterface^ get();
+		void set(UI::IUserInterface^ value);
 	}
 };
