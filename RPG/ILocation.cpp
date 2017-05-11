@@ -14,8 +14,7 @@ ILocation::ILocation(String^ configFile)
 	this->_availableEncounters = gcnew List<IEncounter^>();
 	this->_neighbourLocations = gcnew List<ILocation^>();
 
-
-	auto lines = File::ReadAllLines(this->_configFile);
+	auto lines = File::ReadAllLines(this->ConfigFile);
 	this->Name = lines[0];
 	this->Description = lines[1];
 }

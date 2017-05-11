@@ -1,0 +1,7 @@
+Battle Name
+Battle Description
+Choose Action question
+Choose opponent question
+Melee Attack
+Ranged Attack
+Block Attack

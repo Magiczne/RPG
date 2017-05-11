@@ -6,15 +6,6 @@
 
 namespace Encounters
 {
-	/// Config file structure:
-	/// 1. Name
-	/// 2. Description
-	/// 3. Action question
-	/// 4. Choose opponent question
-	/// 5. Melee Attack
-	/// 6. Ranged Attack
-	/// 7. Block Attack
-	/// 8-n. Special
 	public ref class IBattle abstract
 		: public IEncounter
 	{

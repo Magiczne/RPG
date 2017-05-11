@@ -163,9 +163,18 @@
     <Filter Include="Pliki źródłowe\Locations\Abstraction">
       <UniqueIdentifier>{a2b3cf41-f565-4003-88e4-58b15a851a3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki zasobów\Templates">
+      <UniqueIdentifier>{4b78136c-3418-4860-923b-aef9afcaa9b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="ConfigFiles\Templates\Battle.txt">
+      <Filter>Pliki zasobów\Templates</Filter>
+    </Text>
+    <Text Include="ConfigFiles\Templates\Location.txt">
+      <Filter>Pliki zasobów\Templates</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MagicBlueberry.h">
