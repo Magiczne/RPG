@@ -123,6 +123,6 @@ bool BattleWithRetreat::proceed(ICharacter^ character)
 	}
 	catch(PlayerRetreatException^)
 	{
-		return false;
+		return true;
 	}
 }

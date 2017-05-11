@@ -11,6 +11,10 @@ namespace Encounters
 	public:
 		BasicBattle(System::String^ configFile);
 
+		/// <summary>
+		/// Starts a fight with character
+		/// </summary>
+		/// <param name="character">Character to fight with</param>
 		virtual void fight(ICharacter^ character) override;
 	};
 }

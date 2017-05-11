@@ -24,11 +24,11 @@ bool IBattle::proceed(ICharacter^ character)
 	{
 		this->fight(character);
 		this->Reward->apply(character);
-		return false;
+		return true;
 	}
 	catch (PlayerDeadException^)
 	{
-		return true;
+		return false;
 	}
 }
 
