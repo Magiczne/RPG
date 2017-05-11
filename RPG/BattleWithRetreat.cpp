@@ -12,15 +12,15 @@ using namespace System;
 using namespace System::IO;
 using namespace System::Collections::Generic;
 
-BattleWithRetreat::BattleWithRetreat()
-	: IBattle()
+BattleWithRetreat::BattleWithRetreat(String^ configFile)
+	: IBattle(configFile)
 {
 	
 }
 
 void BattleWithRetreat::fight(ICharacter^ character)
 {
-	auto lines = File::ReadAllLines(this->_configFile);
+	auto lines = File::ReadAllLines(this->ConfigFile);
 
 	auto actionAnswers = gcnew List<String^>();
 

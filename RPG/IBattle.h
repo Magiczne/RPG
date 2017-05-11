@@ -25,7 +25,7 @@ namespace Encounters
 		System::Collections::Generic::List<IOpponent^>^ _opponents;
 
 	public:
-		IBattle();
+		IBattle(System::String^ configFile);
 
 		/// <summary>
 		/// Starts a fight with character

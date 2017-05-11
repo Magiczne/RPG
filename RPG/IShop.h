@@ -6,13 +6,15 @@
 
 namespace Encounters
 {
-	public ref class Shop abstract
+	public ref class IShop abstract
 		: public IEncounter
 	{
 	private:
 		System::Collections::Generic::List<Items::IItem^>^ _availableItems;
 
 	public:
+		IShop(System::String^ configFile);
+
 		/// <summary>
 		/// Trades with character
 		/// </summary>

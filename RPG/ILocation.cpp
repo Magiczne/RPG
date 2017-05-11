@@ -11,7 +11,7 @@ ILocation::ILocation(String^ configFile)
 {
 	this->_configFile = configFile;
 
-	this->_encounters = gcnew List<IEncounter^>();
+	this->_availableEncounters = gcnew List<IEncounter^>();
 	this->_neighbourLocations = gcnew List<ILocation^>();
 
 
@@ -37,9 +37,9 @@ String^ ILocation::ConfigFile::get()
 	return this->_configFile;
 }
 
-List<IEncounter^>^ ILocation::Encounters::get()
+List<IEncounter^>^ ILocation::AvailableEncounters::get()
 {
-	return this->_encounters;
+	return this->_availableEncounters;
 }
 
 List<ILocation^>^ ILocation::NeighbourLocations::get()

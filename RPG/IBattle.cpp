@@ -9,9 +9,10 @@ using namespace System::Collections::Generic;
 using namespace Encounters;
 using namespace Rewards;
 
-IBattle::IBattle()
+IBattle::IBattle(String^ configFile)
+	: IEncounter(configFile)
 {
-	auto lines = File::ReadAllLines(this->_configFile);
+	auto lines = File::ReadAllLines(this->ConfigFile);
 
 	this->Name = lines[0];
 	this->Description = lines[1];

@@ -8,15 +8,15 @@ using namespace System;
 using namespace System::IO;
 using namespace System::Collections::Generic;
 
-BasicBattle::BasicBattle()
-	: IBattle()
+BasicBattle::BasicBattle(String^ configFile)
+	: IBattle(configFile)
 {
 	
 }
 
 void BasicBattle::fight(ICharacter^ character)
 {
-	auto lines = File::ReadAllLines(this->_configFile);
+	auto lines = File::ReadAllLines(this->ConfigFile);
 
 	auto actionAnswers = gcnew List<String^>();
 

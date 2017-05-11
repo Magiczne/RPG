@@ -9,7 +9,7 @@ namespace Encounters
 		: public IBattle
 	{
 	public:
-		BasicBattle();
+		BasicBattle(System::String^ configFile);
 
 		virtual void fight(ICharacter^ character) override;
 	};

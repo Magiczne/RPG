@@ -9,11 +9,11 @@ namespace Encounters
 	{
 	private:
 		UI::IUserInterface^ _userInterface;
-
-	protected:
 		System::String^ _configFile;
 
 	public:
+		IEncounter(System::String^ configFile);
+
 		/// <summary>
 		/// Process an encounter on player
 		/// </summary>
@@ -28,6 +28,14 @@ namespace Encounters
 		{
 			UI::IUserInterface^ get();
 			void set(UI::IUserInterface^ value);
+		}
+
+		/// <summary>
+		/// Config file for the encounter
+		/// </summary>
+		property System::String^ ConfigFile
+		{
+			System::String^ get();
 		}
 	};
 }
