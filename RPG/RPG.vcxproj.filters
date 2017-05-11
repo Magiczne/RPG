@@ -374,5 +374,8 @@
     <ClCompile Include="IMap.cpp">
       <Filter>Pliki źródłowe\Game\Abstraction</Filter>
     </ClCompile>
+    <ClCompile Include="ILocation.cpp">
+      <Filter>Pliki źródłowe\Locations\Abstraction</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

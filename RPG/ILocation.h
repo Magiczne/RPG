@@ -15,6 +15,7 @@ namespace Locations
 		System::Collections::Generic::List<ILocation^>^ _neighbourLocations;
 
 	public:
+		ILocation(System::String^ configFile);
 
 		/// <summary>
 		/// Starts plot of the location
@@ -37,6 +38,14 @@ namespace Locations
 		{
 			System::String^ get();
 			void set(System::String^ value);
+		}
+
+		/// <summary>
+		/// Config file of the location
+		/// </summary>
+		property System::String^ ConfigFile
+		{
+			System::String^ get();
 		}
 
 		/// <summary>
