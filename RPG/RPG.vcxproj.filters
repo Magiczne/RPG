@@ -297,6 +297,9 @@
     <ClInclude Include="Game.h">
       <Filter>Pliki nagłówkowe\Game\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Pliki nagłówkowe\Game\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -394,6 +397,9 @@
     </ClCompile>
     <ClCompile Include="MysteriousWizardFactory.cpp">
       <Filter>Pliki źródłowe\Character\Implementation\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Pliki źródłowe\Game\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
