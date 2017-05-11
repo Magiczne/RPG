@@ -377,5 +377,8 @@
     <ClCompile Include="ILocation.cpp">
       <Filter>Pliki źródłowe\Locations\Abstraction</Filter>
     </ClCompile>
+    <ClCompile Include="MysteriousWizardFactory.cpp">
+      <Filter>Pliki źródłowe\Character\Implementation\Factories</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -202,6 +202,7 @@
     <ClCompile Include="MagicBlueberry.cpp" />
     <ClCompile Include="MagicBoots.cpp" />
     <ClCompile Include="IOpponent.cpp" />
+    <ClCompile Include="MysteriousWizardFactory.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="OrcFactory.cpp" />
     <ClCompile Include="RPG.cpp" />
