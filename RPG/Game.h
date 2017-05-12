@@ -8,6 +8,15 @@ public ref class Game
 	: public IGame
 {
 private:
+	/// <summary>
+	/// Creates random location
+	/// </summary>
+	Locations::ILocation^ createLocation();
+
+	/// <summary>
+	/// Creates random specified encounter
+	/// </summary>
+	Encounters::IEncounter^ createEncounter();
 
 public:
 	/// <summary>
@@ -21,14 +30,4 @@ public:
 	/// Starts game
 	/// </summary>
 	virtual void start() override;
-
-	/// <summary>
-	/// Creates random location
-	/// </summary>
-	Locations::ILocation^ createLocation();
-
-	/// <summary>
-	/// Creates random specified encounter
-	/// </summary>
-	Encounters::IEncounter^ createEncounter();
 };
