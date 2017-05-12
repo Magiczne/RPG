@@ -1,7 +1,8 @@
 #pragma once
 
-#include "IEncounter.h"
 #include "ICharacter.h"
+#include "IEncounter.h"
+#include "IUserInterface.h"
 
 namespace Locations
 {
@@ -13,6 +14,7 @@ namespace Locations
 		System::String^ _configFile;
 		System::Collections::Generic::List<Encounters::IEncounter^>^ _availableEncounters;
 		System::Collections::Generic::List<ILocation^>^ _neighbourLocations;
+		UI::IUserInterface^ _userInterface;
 
 	public:
 		ILocation(System::String^ configFile);
@@ -62,6 +64,15 @@ namespace Locations
 		property System::Collections::Generic::List<ILocation^>^ NeighbourLocations
 		{
 			System::Collections::Generic::List<ILocation^>^ get();
+		}
+
+		/// <summary>
+		/// UserInterface
+		/// </summary>
+		property UI::IUserInterface^ UserInterface
+		{
+			UI::IUserInterface^ get();
+			void set(UI::IUserInterface^ value);
 		}
 	};
 }

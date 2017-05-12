@@ -175,6 +175,12 @@
     <Filter Include="Pliki źródłowe\Encounters\Implementation\Rewards">
       <UniqueIdentifier>{67309146-f296-48c8-942f-340508177d0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Locations\Implementation">
+      <UniqueIdentifier>{2a050b85-a375-4050-b680-c4292215333c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Locations\Implementation">
+      <UniqueIdentifier>{a10ed0b5-4c44-40f1-81dc-9ec89ea2698b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -324,6 +330,9 @@
     <ClInclude Include="Shop.h">
       <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Pliki nagłówkowe\Locations\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -445,6 +454,9 @@
     </ClCompile>
     <ClCompile Include="IItem.cpp">
       <Filter>Pliki źródłowe\Items\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Pliki źródłowe\Locations\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

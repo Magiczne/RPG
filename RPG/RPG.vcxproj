@@ -174,6 +174,7 @@
     <ClInclude Include="IOpponent.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="OrcFactory.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="PlayerDeadException.h" />
     <ClInclude Include="PlayerRetreatException.h" />
     <ClInclude Include="Shop.h" />
@@ -211,6 +212,7 @@
     <ClCompile Include="IMap.cpp" />
     <ClCompile Include="IShop.cpp" />
     <ClCompile Include="ItemReward.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="MadCharacter.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="MysteriousWizard.cpp" />

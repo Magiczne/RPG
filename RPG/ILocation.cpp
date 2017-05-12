@@ -2,6 +2,7 @@
 
 using namespace Encounters;
 using namespace Locations;
+using namespace UI;
 
 using namespace System;
 using namespace System::IO;
@@ -46,6 +47,11 @@ List<ILocation^>^ ILocation::NeighbourLocations::get()
 	return this->_neighbourLocations;
 }
 
+IUserInterface^ ILocation::UserInterface::get()
+{
+	return this->_userInterface;
+}
+
 #pragma endregion
 
 #pragma region Setters
@@ -58,6 +64,11 @@ void ILocation::Name::set(String^ value)
 void ILocation::Description::set(String^ value)
 {
 	this->_description = value;
+}
+
+void ILocation::UserInterface::set(IUserInterface^ value)
+{
+	this->_userInterface = value;
 }
 
 #pragma endregion
