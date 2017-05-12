@@ -10,12 +10,21 @@
 #include "ShopFactory.h"
 #include "BattleFactory.h"
 
+#include "ConsoleUserInterface.h"
+
 using namespace Encounters;
 using namespace Encounters::Factories;
 using namespace Locations;
+using namespace UI;
 
 using namespace System;
+using namespace System::IO;
 using namespace System::Collections::Generic;
+
+Game::Game()
+{
+	this->UserInterface = ConsoleUserInterface::Instance;
+}
 
 IMap^ Game::createGame(int locations)
 {
@@ -53,6 +62,9 @@ IMap^ Game::createGame(int locations)
 		map->LocationsAdjacency->Add(adjacency);
 	}
 
+	//Setup starting location
+	map->StartLocation = map->LocationsList[0];
+
 	return map;
 }
 
@@ -67,7 +79,8 @@ void Game::start()
 
 ILocation^ Game::createLocation()
 {
-	auto location = gcnew Location("Location.txt");
+	auto location = gcnew Location(Path::Combine("ConfigFiles", "Location.txt"));
+	location->UserInterface = this->UserInterface;
 
 	auto random = gcnew Random();
 

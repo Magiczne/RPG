@@ -135,8 +135,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ConfigFiles\Templates\Battle.txt" />
-    <Text Include="ConfigFiles\Templates\Location.txt" />
+    <Text Include="ConfigFiles\BasicBattle.txt" />
+    <Text Include="ConfigFiles\BattleWithRetreat.txt" />
+    <Text Include="ConfigFiles\Location.txt" />
+    <Text Include="ConfigFiles\Shop.txt" />
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

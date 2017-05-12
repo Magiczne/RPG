@@ -1,0 +1,5 @@
+Some Location
+Some Location Description
+What do you wanna do?
+Go to:
+Start encounter:

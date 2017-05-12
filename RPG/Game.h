@@ -19,6 +19,8 @@ private:
 	Encounters::IEncounter^ createEncounter();
 
 public:
+	Game();
+
 	/// <summary>
 	/// Creates a game with specified number of location
 	/// </summary>

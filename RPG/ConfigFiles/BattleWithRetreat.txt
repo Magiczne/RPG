@@ -1,0 +1,8 @@
+Some Battle Name
+Some Battle Description
+What do you want to do?
+Choose opponent you want to attack:
+Melee Attack
+Ranged Attack
+Block Attack
+Retreat

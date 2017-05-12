@@ -10,16 +10,22 @@
 #include "Helmet.h"
 #include "MagicBoots.h"
 
+#include "ConsoleUserInterface.h"
+
 using namespace Encounters;
 using namespace Encounters::Factories;
 using namespace Items;
+using namespace UI;
 
 using namespace System;
+using namespace System::IO;
 
 IShop^ ShopFactory::create(ShopType type)
 {
 	auto random = gcnew Random();
-	auto shop = gcnew Shop("Shop.txt");
+	auto shop = gcnew Shop(Path::Combine("ConfigFiles", "Shop.txt"));
+
+	shop->UserInterface = ConsoleUserInterface::Instance;
 
 	switch(type)
 	{

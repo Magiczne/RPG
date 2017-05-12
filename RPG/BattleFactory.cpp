@@ -13,12 +13,16 @@
 
 #include "Apple.h"
 
+#include "ConsoleUserInterface.h"
+
 using namespace Encounters;
 using namespace Encounters::Factories;
 using namespace Encounters::Rewards;
 using namespace Items;
+using namespace UI;
 
 using namespace System;
+using namespace System::IO;
 
 IBattle^ BattleFactory::create(BattleType type)
 {
@@ -27,13 +31,15 @@ IBattle^ BattleFactory::create(BattleType type)
 	switch(type)
 	{
 	case BattleType::Basic:
-		battle = gcnew BasicBattle("BasicBattle.txt");
+		battle = gcnew BasicBattle(Path::Combine("ConfigFiles", "BasicBattle.txt"));
 		break;
 
 	case BattleType::WithRetreat:
-		battle = gcnew BasicBattle("BattleWithRetreat.txt");
+		battle = gcnew BasicBattle(Path::Combine("ConfigFiles", "BattleWithRetreat.txt"));
 		break;
 	}
+
+	battle->UserInterface = ConsoleUserInterface::Instance;
 
 	auto random = gcnew Random();
 
@@ -51,6 +57,8 @@ IBattle^ BattleFactory::create(BattleType type)
 		case 2:
 			character = (gcnew OrcFactory)->createCharacter();
 			break;
+		default:
+			throw gcnew ArgumentOutOfRangeException("random->Next(0, 2)");
 		}
 
 		battle->Opponents->Add(safe_cast<IOpponent^>(character));

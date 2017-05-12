@@ -163,9 +163,6 @@
     <Filter Include="Pliki źródłowe\Locations\Abstraction">
       <UniqueIdentifier>{a2b3cf41-f565-4003-88e4-58b15a851a3e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki zasobów\Templates">
-      <UniqueIdentifier>{4b78136c-3418-4860-923b-aef9afcaa9b6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\Game\Implementation">
       <UniqueIdentifier>{522461cd-c052-4770-8094-74d66acef249}</UniqueIdentifier>
     </Filter>
@@ -196,11 +193,17 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
-    <Text Include="ConfigFiles\Templates\Battle.txt">
-      <Filter>Pliki zasobów\Templates</Filter>
+    <Text Include="ConfigFiles\BasicBattle.txt">
+      <Filter>Pliki zasobów</Filter>
     </Text>
-    <Text Include="ConfigFiles\Templates\Location.txt">
-      <Filter>Pliki zasobów\Templates</Filter>
+    <Text Include="ConfigFiles\BattleWithRetreat.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="ConfigFiles\Location.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="ConfigFiles\Shop.txt">
+      <Filter>Pliki zasobów</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
@@ -473,9 +476,6 @@
     <ClCompile Include="TitleReward.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Rewards</Filter>
     </ClCompile>
-    <ClCompile Include="Shop.cpp">
-      <Filter>Pliki źródłowe\Encounters\Implementation</Filter>
-    </ClCompile>
     <ClCompile Include="IItem.cpp">
       <Filter>Pliki źródłowe\Items\Abstraction</Filter>
     </ClCompile>
@@ -490,6 +490,9 @@
     </ClCompile>
     <ClCompile Include="BattleFactory.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Shops</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
