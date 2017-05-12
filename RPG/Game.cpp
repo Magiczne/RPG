@@ -40,7 +40,7 @@ IMap^ Game::createGame(int locations)
 
 	for(int i = 0; i < locations; i++)
 	{
-		map->LocationsList->Add(this->createLocation());
+		auto location = this->createLocation();
 
 		//Create adjacency list for current vertex of the graph
 		auto adjacency = gcnew List<int>();
@@ -58,8 +58,20 @@ IMap^ Game::createGame(int locations)
 			adjacency->Add(index);
 		}
 
+		//Add location to locations list
+		map->LocationsList->Add(location);
+
 		//Add adjacency list for current vertex to the map
 		map->LocationsAdjacency->Add(adjacency);
+	}
+
+	//Tell all locations theirs neighbours
+	for(int i = 0; i < map->LocationsAdjacency->Count; i++)
+	{
+		for each(auto index in map->LocationsAdjacency[i])
+		{
+			map->LocationsList[i]->NeighbourLocations->Add(map->LocationsList[index]);
+		}
 	}
 
 	//Setup starting location

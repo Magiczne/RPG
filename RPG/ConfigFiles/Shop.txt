@@ -1,1 +1,2 @@
 What do you wanna buy?
+Exit shop

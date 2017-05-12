@@ -12,6 +12,8 @@ using namespace Rewards;
 IBattle::IBattle(String^ configFile)
 	: IEncounter(configFile)
 {
+	this->_opponents = gcnew List<IOpponent^>();
+
 	auto lines = File::ReadAllLines(this->ConfigFile);
 
 	this->Name = lines[0];

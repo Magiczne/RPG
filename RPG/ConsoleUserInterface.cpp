@@ -29,8 +29,12 @@ int ConsoleUserInterface::askQuestion(String^ question, List<String^>^ answers)
 
 	do
 	{
-		choice = Console::Read() - 48;
-	} while (choice > answers->Count - 1 && choice >= 0);
+		try
+		{
+			choice = Convert::ToInt32(Console::ReadLine());
+		}
+		catch (FormatException^ ) {}
+	} while (choice > answers->Count - 1 && choice < 0);
 
 	return choice;
 }
