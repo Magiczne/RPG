@@ -43,10 +43,10 @@ IBattle^ BattleFactory::create(BattleType type)
 
 	auto random = gcnew Random();
 
-	for(int i = 0; i < random->Next(1, 3); i++)
+	for(int i = 0; i < random->Next(1, 4); i++)
 	{
 		ICharacter^ character;
-		switch (random->Next(0, 2))
+		switch (random->Next(0, 3))
 		{
 		case 0:
 			character = (gcnew GiantWaspFactory)->createCharacter();
@@ -57,8 +57,6 @@ IBattle^ BattleFactory::create(BattleType type)
 		case 2:
 			character = (gcnew OrcFactory)->createCharacter();
 			break;
-		default:
-			throw gcnew ArgumentOutOfRangeException("random->Next(0, 2)");
 		}
 
 		battle->Opponents->Add(safe_cast<IOpponent^>(character));
@@ -70,7 +68,7 @@ IBattle^ BattleFactory::create(BattleType type)
 	{
 	case 0:
 		reward = gcnew GoldReward();
-		(safe_cast<GoldReward^>(reward))->addGold(random->Next(10, 20));
+		(safe_cast<GoldReward^>(reward))->addGold(random->Next(10, 21));
 		break;
 	case 1:
 		reward = gcnew ItemReward();

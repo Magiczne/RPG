@@ -30,9 +30,9 @@ IShop^ ShopFactory::create(ShopType type)
 	switch(type)
 	{
 	case ShopType::Groceries:
-		for(int i = 0; i < random->Next(2, 4); i++)
+		for(int i = 0; i < random->Next(2, 5); i++)
 		{
-			switch(random->Next(0, 2))
+			switch(random->Next(0, 3))
 			{
 			case 0:
 				shop->AvailableItems->Add(gcnew Apple());
@@ -48,9 +48,9 @@ IShop^ ShopFactory::create(ShopType type)
 		break;
 
 	case ShopType::EqiupmentShop:
-		for(int i = 0; i < random->Next(1, 3); i++)
+		for(int i = 0; i < random->Next(1, 4); i++)
 		{
-			switch (random->Next(0, 2))
+			switch (random->Next(0, 3))
 			{
 			case 0:
 				shop->AvailableItems->Add(gcnew Chestplate());

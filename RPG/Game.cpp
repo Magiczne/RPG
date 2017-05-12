@@ -96,7 +96,7 @@ ILocation^ Game::createLocation()
 
 	auto random = gcnew Random();
 
-	for(int i = 0; i < random->Next(1, 2); i++)
+	for(int i = 0; i < random->Next(1, 3); i++)
 	{
 		auto encounter = this->createEncounter();
 		
@@ -111,13 +111,13 @@ IEncounter^ Game::createEncounter()
 	auto random = gcnew Random();
 	IEncounter^ encounter;
 
-	int choice = random->Next(0, 2);
+	int choice = random->Next(0, 3);
 
 	switch(choice)
 	{
 	case 0:		//Shop
 		encounter = (gcnew ShopFactory)->create(
-			random->Next(0, 1)
+			random->Next(0, 2)
 			? ShopType::Groceries
 			: ShopType::EqiupmentShop
 		);
