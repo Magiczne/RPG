@@ -5,7 +5,7 @@
 
 namespace Encounters
 {
-	public ref class BasicBattle abstract
+	public ref class BasicBattle
 		: public IBattle
 	{
 	public:

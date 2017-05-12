@@ -22,3 +22,13 @@ void Map::run(ICharacter^ character)
 	}
 	//TODO: Some break case
 }
+
+List<ILocation^>^ Map::LocationsList::get()
+{
+	return this->_locations;
+}
+
+List<List<int>^>^ Map::LocationsAdjacency::get()
+{
+	return this->_locationsAdjacency;
+}

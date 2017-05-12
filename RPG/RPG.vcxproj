@@ -142,11 +142,13 @@
   <ItemGroup>
     <ClInclude Include="Apple.h" />
     <ClInclude Include="BasicBattle.h" />
+    <ClInclude Include="BattleFactory.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GoldReward.h" />
     <ClInclude Include="IBattle.h" />
     <ClInclude Include="BattleWithRetreat.h" />
     <ClInclude Include="Bread.h" />
+    <ClInclude Include="IBattleFactory.h" />
     <ClInclude Include="ICharacter.h" />
     <ClInclude Include="Chestplate.h" />
     <ClInclude Include="ConsoleUserInterface.h" />
@@ -161,6 +163,7 @@
     <ClInclude Include="IFood.h" />
     <ClInclude Include="IGame.h" />
     <ClInclude Include="IItem.h" />
+    <ClInclude Include="IShopFactory.h" />
     <ClInclude Include="ItemNotWearableException.h" />
     <ClInclude Include="ILocation.h" />
     <ClInclude Include="ItemReward.h" />
@@ -178,6 +181,7 @@
     <ClInclude Include="PlayerDeadException.h" />
     <ClInclude Include="PlayerRetreatException.h" />
     <ClInclude Include="Shop.h" />
+    <ClInclude Include="ShopFactory.h" />
     <ClInclude Include="StatisticsFactory.h" />
     <ClInclude Include="TitledCharacter.h" />
     <ClInclude Include="TitleReward.h" />
@@ -192,11 +196,13 @@
     <ClCompile Include="Apple.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="BasicBattle.cpp" />
+    <ClCompile Include="BattleFactory.cpp" />
     <ClCompile Include="BattleWithRetreat.cpp" />
     <ClCompile Include="Bread.cpp" />
     <ClCompile Include="Chestplate.cpp" />
     <ClCompile Include="ConsoleUserInterface.cpp" />
     <ClCompile Include="Equipment.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GoldReward.cpp" />
     <ClCompile Include="ICharacterDecorator.cpp" />
     <ClCompile Include="IFood.cpp" />
@@ -224,6 +230,7 @@
     <ClCompile Include="OrcFactory.cpp" />
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="ShopFactory.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
     <ClCompile Include="TitledCharacter.cpp" />

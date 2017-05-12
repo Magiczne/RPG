@@ -181,6 +181,18 @@
     <Filter Include="Pliki źródłowe\Locations\Implementation">
       <UniqueIdentifier>{a10ed0b5-4c44-40f1-81dc-9ec89ea2698b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Implementation\Shops">
+      <UniqueIdentifier>{8ce4a73e-a7a8-44a2-8e32-cd958240c43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Abstraction\Shops">
+      <UniqueIdentifier>{bc8fcd9f-54cf-4aec-9f15-bdf2f4ed707e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Encounters\Implementation\Shops">
+      <UniqueIdentifier>{e6e8d573-e05e-4220-90d1-17042c5141a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Encounters\Abstraction\Battles">
+      <UniqueIdentifier>{a0a62c3a-6322-451c-b238-f2bd6d428ca8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -270,12 +282,6 @@
     <ClInclude Include="IEncounter.h">
       <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
     </ClInclude>
-    <ClInclude Include="IBattle.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
-    </ClInclude>
-    <ClInclude Include="IShop.h">
-      <Filter>Pliki nagłówkowe\Encounters\Abstraction</Filter>
-    </ClInclude>
     <ClInclude Include="IOpponent.h">
       <Filter>Pliki nagłówkowe\Character\Abstraction\Opponents</Filter>
     </ClInclude>
@@ -327,11 +333,29 @@
     <ClInclude Include="TitleReward.h">
       <Filter>Pliki nagłówkowe\Encounters\Implementation\Rewards</Filter>
     </ClInclude>
-    <ClInclude Include="Shop.h">
-      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
-    </ClInclude>
     <ClInclude Include="Location.h">
       <Filter>Pliki nagłówkowe\Locations\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Shops</Filter>
+    </ClInclude>
+    <ClInclude Include="ShopFactory.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Shops</Filter>
+    </ClInclude>
+    <ClInclude Include="IShop.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Shops</Filter>
+    </ClInclude>
+    <ClInclude Include="IShopFactory.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Shops</Filter>
+    </ClInclude>
+    <ClInclude Include="IBattle.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Battles</Filter>
+    </ClInclude>
+    <ClInclude Include="IBattleFactory.h">
+      <Filter>Pliki nagłówkowe\Encounters\Abstraction\Battles</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleFactory.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation\Battles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -457,6 +481,15 @@
     </ClCompile>
     <ClCompile Include="Location.cpp">
       <Filter>Pliki źródłowe\Locations\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Pliki źródłowe\Game\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ShopFactory.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Shops</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleFactory.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation\Battles</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
