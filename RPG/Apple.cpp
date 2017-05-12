@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ Apple::getStatistics()
+Apple::Apple()
 {
-	return gcnew Statistics(10, 0, 0, 0, 0, 0, 0, 0);
+	this->Stats = gcnew Statistics(10, 0, 0, 0, 0, 0, 0, 0);
 }

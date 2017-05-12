@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ MagicBoots::getStatistics()
+MagicBoots::MagicBoots()
 {
-	return gcnew Statistics(0, 0, 2, 0, 1, 2, 2, 0);
+	this->Stats = gcnew Statistics(0, 0, 2, 0, 1, 2, 2, 0);
 }

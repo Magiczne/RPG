@@ -7,9 +7,9 @@ namespace Items
 	public ref class IItem abstract
 	{
 	private:
-		property System::String^ Name;
-		property int Price;
-		property Statistics^ Stats;
+		System::String^ _name;
+		int _price;
+		Statistics^ _statistics;
 
 	public:
 		/// <summary>
@@ -19,9 +19,31 @@ namespace Items
 		virtual bool isWearable() abstract;
 
 		/// <summary>
+		/// Item name
+		/// </summary>
+		property System::String^ Name
+		{
+			System::String^ get();
+			void set(System::String^ value);
+		}
+
+		/// <summary>
+		/// Item Price
+		/// </summary>
+		property int Price
+		{
+			int get();
+			void set(int value);
+		}
+
+		/// <summary>
 		/// Gets item statistics
 		/// </summary>
 		/// <returns>Item statistics</returns>
-		virtual Statistics^ getStatistics() abstract;
+		property Statistics^ Stats
+		{
+			Statistics^ get();
+			void set(Statistics^ value);
+		}
 	};
 }

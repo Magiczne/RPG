@@ -321,6 +321,9 @@
     <ClInclude Include="TitleReward.h">
       <Filter>Pliki nagłówkowe\Encounters\Implementation\Rewards</Filter>
     </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Pliki nagłówkowe\Encounters\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -436,6 +439,12 @@
     </ClCompile>
     <ClCompile Include="TitleReward.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Rewards</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Pliki źródłowe\Encounters\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="IItem.cpp">
+      <Filter>Pliki źródłowe\Items\Abstraction</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ Helmet::getStatistics()
+Helmet::Helmet()
 {
-	return gcnew Statistics(0, 0, 0, 0, 5, 2, 0, 0);
+	this->Stats = gcnew Statistics(0, 0, 0, 0, 5, 2, 0, 0);
 }

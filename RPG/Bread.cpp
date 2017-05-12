@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ Bread::getStatistics()
+Bread::Bread()
 {
-	return gcnew Statistics(20, 5, 0, 0, 0, 0, 0, 0);
+	this->Stats = gcnew Statistics(20, 5, 0, 0, 0, 0, 0, 0);
 }

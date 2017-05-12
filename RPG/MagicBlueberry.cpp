@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ MagicBlueberry::getStatistics()
+MagicBlueberry::MagicBlueberry()
 {
-	return gcnew Statistics(0, 0, 1, 0, 0, 0, 0, 0);
+	this->Stats = gcnew Statistics(0, 0, 1, 0, 0, 0, 0, 0);
 }

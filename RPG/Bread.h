@@ -9,10 +9,6 @@ namespace Items
 		: public IFood
 	{
 	public:
-		/// <summary>
-		/// Gets item statistics
-		/// </summary>
-		/// <returns>Item statistics</returns>
-		Statistics^ getStatistics() override;
+		Bread();
 	};
 }

@@ -2,7 +2,7 @@
 
 using namespace Items;
 
-Statistics^ Chestplate::getStatistics()
+Chestplate::Chestplate()
 {
-	return gcnew Statistics(0, 0, 0, 5, 0, 1, 0, 0);
+	this->Stats = gcnew Statistics(0, 0, 0, 5, 0, 1, 0, 0);
 }

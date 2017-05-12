@@ -26,7 +26,7 @@ Statistics^ Equipment::use(int index)
 		else
 		{
 			this->remove(item);
-			return item->getStatistics();
+			return item->Stats;
 		}
 	}
 
@@ -49,7 +49,7 @@ Statistics^ Equipment::wear(int index)
 				this->_toUse->Remove(item);
 				this->_inUse->Add(item);
 
-				return item->getStatistics();
+				return item->Stats;
 			}
 			
 			//If it is not throw
@@ -71,7 +71,7 @@ Statistics^ Equipment::unWear(int index)
 		this->_inUse->Remove(item);
 		this->_toUse->Add(item);
 
-		return item->getStatistics();
+		return item->Stats;
 	}
 	
 	//If it is not throw
