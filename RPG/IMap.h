@@ -21,5 +21,6 @@ public:
 	property Locations::ILocation^ StartLocation
 	{
 		Locations::ILocation^ get();
+		void set(Locations::ILocation^ value);
 	}
 };
