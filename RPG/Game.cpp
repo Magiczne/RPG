@@ -50,7 +50,7 @@ IMap^ Game::createGame(int locations)
 		{
 			auto index = i + neighbourIndexModifiers[j];
 
-			if(index < 0 || index % inLine == 0 || (index >= locations && i % inLine == 2))
+			if(index < 0 || (index % inLine == 0 && i % inLine == 2) || index >= locations)
 			{
 				continue;
 			}
