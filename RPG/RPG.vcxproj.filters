@@ -190,6 +190,24 @@
     <Filter Include="Pliki nagłówkowe\Encounters\Abstraction\Battles">
       <UniqueIdentifier>{a0a62c3a-6322-451c-b238-f2bd6d428ca8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Achievements">
+      <UniqueIdentifier>{d3eb1d84-5da7-4768-8b14-aac03058de5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Achievements">
+      <UniqueIdentifier>{cf6505e6-6a32-4526-a653-4f430bd06570}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Achievements\Abstraction">
+      <UniqueIdentifier>{624545c6-c600-4105-b233-8bed8387fc87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Achievements\Implementation">
+      <UniqueIdentifier>{45c02532-8138-490a-878b-b5c49a1f36d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Achievements\Abstraction">
+      <UniqueIdentifier>{df873ceb-9c53-41c9-9494-a13ba7efa59d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Achievements\Implementation">
+      <UniqueIdentifier>{843b542b-5be0-4198-9b18-125727c63317}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -360,6 +378,12 @@
     <ClInclude Include="BattleFactory.h">
       <Filter>Pliki nagłówkowe\Encounters\Implementation\Battles</Filter>
     </ClInclude>
+    <ClInclude Include="IAchievementListener.h">
+      <Filter>Pliki nagłówkowe\Achievements\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="KillCountManager.h">
+      <Filter>Pliki nagłówkowe\Achievements\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -493,6 +517,15 @@
     </ClCompile>
     <ClCompile Include="Shop.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Shops</Filter>
+    </ClCompile>
+    <ClCompile Include="IAchievementManager.h">
+      <Filter>Pliki nagłówkowe\Achievements\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="IAchievementManager.cpp">
+      <Filter>Pliki źródłowe\Achievements\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="KillCountManager.cpp">
+      <Filter>Pliki źródłowe\Achievements\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,11 +1,13 @@
 #pragma once
 
 #include "IUserInterface.h"
+#include "IAchievementListener.h"
 
 namespace UI
 {
 	public ref class ConsoleUserInterface 
-		: public IUserInterface
+		: public IUserInterface, 
+		  public Achievements::IAchievementListener
 	{
 	public:
 		/// <summary>
@@ -21,6 +23,11 @@ namespace UI
 		/// </summary>
 		/// <param name="message"></param>
 		virtual void showMessage(System::String^ message);
+
+		/// <summary>
+		/// Shows message for unlocked achievement
+		/// </summary>
+		virtual void achievementUnlocked(System::String^ achievement);
 
 		/// <summary>
 		/// Instance of the Interface

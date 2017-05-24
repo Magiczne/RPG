@@ -142,6 +142,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IAchievementListener.h" />
     <ClInclude Include="Apple.h" />
     <ClInclude Include="BasicBattle.h" />
     <ClInclude Include="BattleFactory.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="ItemNotWearableException.h" />
     <ClInclude Include="ILocation.h" />
     <ClInclude Include="ItemReward.h" />
+    <ClInclude Include="KillCountManager.h" />
     <ClInclude Include="MadCharacter.h" />
     <ClInclude Include="IMap.h" />
     <ClInclude Include="Map.h" />
@@ -206,6 +208,7 @@
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GoldReward.cpp" />
+    <ClCompile Include="IAchievementManager.cpp" />
     <ClCompile Include="ICharacterDecorator.cpp" />
     <ClCompile Include="IFood.cpp" />
     <ClCompile Include="GiantWasp.cpp" />
@@ -220,6 +223,7 @@
     <ClCompile Include="IMap.cpp" />
     <ClCompile Include="IShop.cpp" />
     <ClCompile Include="ItemReward.cpp" />
+    <ClCompile Include="KillCountManager.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MadCharacter.cpp" />
     <ClCompile Include="Map.cpp" />
@@ -233,6 +237,7 @@
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="ShopFactory.cpp" />
+    <ClCompile Include="IAchievementManager.h" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
     <ClCompile Include="TitledCharacter.cpp" />

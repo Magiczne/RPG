@@ -44,6 +44,11 @@ void ConsoleUserInterface::showMessage(String^ message)
 	this->writeCentered(message);
 }
 
+void ConsoleUserInterface::achievementUnlocked(String^ achievement)
+{
+	this->writeCentered(achievement);
+}
+
 void ConsoleUserInterface::writeCentered(String^ message)
 {
 	Console::WriteLine(

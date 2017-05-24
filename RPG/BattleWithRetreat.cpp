@@ -2,10 +2,12 @@
 
 #include "BattleWithRetreat.h"
 #include "StatisticsFactory.h"
+#include "KillCountManager.h"
 
 #include "PlayerDeadException.h"
 #include "PlayerRetreatException.h"
 
+using namespace Achievements;
 using namespace Encounters;
 
 using namespace System;
@@ -98,6 +100,7 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		if (chosenOpponent->Stats->HP <= 0)
 		{
 			this->Opponents->Remove(chosenOpponent);
+			KillCountManager::Instance->addKills(1);
 		}
 
 		//If there is no more opponents return
