@@ -208,6 +208,30 @@
     <Filter Include="Pliki źródłowe\Achievements\Implementation">
       <UniqueIdentifier>{843b542b-5be0-4198-9b18-125727c63317}</UniqueIdentifier>
     </Filter>
+    <Filter Include="- Bartek Piekarz">
+      <UniqueIdentifier>{365d8965-2085-4597-8481-c78aca301bad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Aga">
+      <UniqueIdentifier>{8b870b63-7ea5-4a1d-a452-288fefa31fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Karina">
+      <UniqueIdentifier>{4c14740e-a678-4a2d-ba9f-7cb3e62ebb9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Aga\Opponents">
+      <UniqueIdentifier>{47f07a50-a50c-4229-88b0-56359c708b73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Aga\Encounters">
+      <UniqueIdentifier>{04703139-2d28-486c-9540-86ca28dca3a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Karina\Items">
+      <UniqueIdentifier>{1c92157c-1a63-414b-bf3b-1978a58e8fe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Karina\Rewards">
+      <UniqueIdentifier>{d5159e5e-1c5b-45a1-b1fc-f0c20c377714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="- Bartek Piekarz\Rewards">
+      <UniqueIdentifier>{12d9d0b1-ce3e-4e3e-a3c2-942a4d42fb80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -393,6 +417,36 @@
     <ClInclude Include="AskQuestion.h">
       <Filter>Pliki nagłówkowe\UserInterface\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="Vampire.h">
+      <Filter>- Aga\Opponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Battle1.h">
+      <Filter>- Aga\Encounters</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop1.h">
+      <Filter>- Aga\Encounters</Filter>
+    </ClInclude>
+    <ClInclude Include="Amulet.h">
+      <Filter>- Karina\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="AmuletAdapter.h">
+      <Filter>- Karina</Filter>
+    </ClInclude>
+    <ClInclude Include="Chocolates.h">
+      <Filter>- Karina\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="ChocolatesAdapter.h">
+      <Filter>- Karina</Filter>
+    </ClInclude>
+    <ClInclude Include="RewardStatistics.h">
+      <Filter>- Karina\Rewards</Filter>
+    </ClInclude>
+    <ClInclude Include="Witch.h">
+      <Filter>- Aga\Opponents</Filter>
+    </ClInclude>
+    <ClInclude Include="RewardGold.h">
+      <Filter>- Bartek Piekarz\Rewards</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -539,5 +593,34 @@
     <ClCompile Include="AskQuestion.cpp">
       <Filter>Pliki źródłowe\UserInterface\Implementation</Filter>
     </ClCompile>
+    <ClCompile Include="Vampire.cpp">
+      <Filter>- Aga\Opponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Battle1.cpp">
+      <Filter>- Aga\Encounters</Filter>
+    </ClCompile>
+    <ClCompile Include="Shop1.cpp">
+      <Filter>- Aga\Encounters</Filter>
+    </ClCompile>
+    <ClCompile Include="Amulet.cpp">
+      <Filter>- Karina\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="Chocolates.cpp">
+      <Filter>- Karina\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="RewardStatistics.cpp">
+      <Filter>- Karina\Rewards</Filter>
+    </ClCompile>
+    <ClCompile Include="Witch.cpp">
+      <Filter>- Aga\Opponents</Filter>
+    </ClCompile>
+    <ClCompile Include="RewardGold.cpp">
+      <Filter>- Bartek Piekarz\Rewards</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AskQuestion.resx">
+      <Filter>Pliki zasobów</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -144,9 +144,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Amulet.h" />
+    <ClInclude Include="AmuletAdapter.h" />
     <ClInclude Include="AskQuestion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Battle1.h" />
+    <ClInclude Include="Chocolates.h" />
+    <ClInclude Include="ChocolatesAdapter.h" />
     <ClInclude Include="IAchievementListener.h" />
     <ClInclude Include="Apple.h" />
     <ClInclude Include="BasicBattle.h" />
@@ -190,11 +195,15 @@
     <ClInclude Include="Location.h" />
     <ClInclude Include="PlayerDeadException.h" />
     <ClInclude Include="PlayerRetreatException.h" />
+    <ClInclude Include="RewardGold.h" />
+    <ClInclude Include="RewardStatistics.h" />
     <ClInclude Include="Shop.h" />
+    <ClInclude Include="Shop1.h" />
     <ClInclude Include="ShopFactory.h" />
     <ClInclude Include="StatisticsFactory.h" />
     <ClInclude Include="TitledCharacter.h" />
     <ClInclude Include="TitleReward.h" />
+    <ClInclude Include="Vampire.h" />
     <ClInclude Include="Warrior.h" />
     <ClInclude Include="IReward.h" />
     <ClInclude Include="IShop.h" />
@@ -202,16 +211,20 @@
     <ClInclude Include="IWearable.h" />
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="WinFormsUserInterface.h" />
+    <ClInclude Include="Witch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Amulet.cpp" />
     <ClCompile Include="Apple.cpp" />
     <ClCompile Include="AskQuestion.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="BasicBattle.cpp" />
+    <ClCompile Include="Battle1.cpp" />
     <ClCompile Include="BattleFactory.cpp" />
     <ClCompile Include="BattleWithRetreat.cpp" />
     <ClCompile Include="Bread.cpp" />
     <ClCompile Include="Chestplate.cpp" />
+    <ClCompile Include="Chocolates.cpp" />
     <ClCompile Include="ConsoleUserInterface.cpp" />
     <ClCompile Include="Equipment.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -242,16 +255,21 @@
     <ClCompile Include="MysteriousWizardFactory.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="OrcFactory.cpp" />
+    <ClCompile Include="RewardGold.cpp" />
+    <ClCompile Include="RewardStatistics.cpp" />
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Shop.cpp" />
+    <ClCompile Include="Shop1.cpp" />
     <ClCompile Include="ShopFactory.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
     <ClCompile Include="TitledCharacter.cpp" />
     <ClCompile Include="TitleReward.cpp" />
+    <ClCompile Include="Vampire.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="IWearable.cpp" />
     <ClCompile Include="WinFormsUserInterface.cpp" />
+    <ClCompile Include="Witch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AskQuestion.resx">
