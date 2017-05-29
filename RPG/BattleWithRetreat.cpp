@@ -100,7 +100,7 @@ void BattleWithRetreat::fight(ICharacter^ character)
 		if (chosenOpponent->Stats->HP <= 0)
 		{
 			this->Opponents->Remove(chosenOpponent);
-			KillCountManager::Instance->addKills(1);
+			//KillCountManager::Instance->addKills(1);
 		}
 
 		//If there is no more opponents return

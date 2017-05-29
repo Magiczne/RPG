@@ -11,6 +11,7 @@
 #include "BattleFactory.h"
 
 #include "ConsoleUserInterface.h"
+#include "WinFormsUserInterface.h"
 
 using namespace Encounters;
 using namespace Encounters::Factories;
@@ -23,7 +24,8 @@ using namespace System::Collections::Generic;
 
 Game::Game()
 {
-	this->UserInterface = ConsoleUserInterface::Instance;
+	//this->UserInterface = ConsoleUserInterface::Instance;
+	this->UserInterface = WinFormsUserInterface::Instance;
 }
 
 IMap^ Game::createGame(int locations)

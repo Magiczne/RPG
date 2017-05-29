@@ -132,6 +132,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -142,12 +144,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AskQuestion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="IAchievementListener.h" />
     <ClInclude Include="Apple.h" />
     <ClInclude Include="BasicBattle.h" />
     <ClInclude Include="BattleFactory.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GoldReward.h" />
+    <ClInclude Include="IAchievementManager.h" />
     <ClInclude Include="IBattle.h" />
     <ClInclude Include="BattleWithRetreat.h" />
     <ClInclude Include="Bread.h" />
@@ -195,9 +201,11 @@
     <ClInclude Include="IUserInterface.h" />
     <ClInclude Include="IWearable.h" />
     <ClInclude Include="Statistics.h" />
+    <ClInclude Include="WinFormsUserInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Apple.cpp" />
+    <ClCompile Include="AskQuestion.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="BasicBattle.cpp" />
     <ClCompile Include="BattleFactory.cpp" />
@@ -237,13 +245,18 @@
     <ClCompile Include="RPG.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="ShopFactory.cpp" />
-    <ClCompile Include="IAchievementManager.h" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="StatisticsFactory.cpp" />
     <ClCompile Include="TitledCharacter.cpp" />
     <ClCompile Include="TitleReward.cpp" />
     <ClCompile Include="Warrior.cpp" />
     <ClCompile Include="IWearable.cpp" />
+    <ClCompile Include="WinFormsUserInterface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AskQuestion.resx">
+      <DependentUpon>AskQuestion.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

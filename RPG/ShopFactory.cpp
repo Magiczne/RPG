@@ -11,6 +11,7 @@
 #include "MagicBoots.h"
 
 #include "ConsoleUserInterface.h"
+#include "WinFormsUserInterface.h"
 
 using namespace Encounters;
 using namespace Encounters::Factories;
@@ -25,7 +26,8 @@ IShop^ ShopFactory::create(ShopType type)
 	auto random = gcnew Random();
 	auto shop = gcnew Shop(Path::Combine("ConfigFiles", "Shop.txt"));
 
-	shop->UserInterface = ConsoleUserInterface::Instance;
+	//shop->UserInterface = ConsoleUserInterface::Instance;
+	shop->UserInterface = WinFormsUserInterface::Instance;
 
 	switch(type)
 	{

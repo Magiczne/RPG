@@ -384,6 +384,15 @@
     <ClInclude Include="KillCountManager.h">
       <Filter>Pliki nagłówkowe\Achievements\Implementation</Filter>
     </ClInclude>
+    <ClInclude Include="WinFormsUserInterface.h">
+      <Filter>Pliki nagłówkowe\UserInterface\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="IAchievementManager.h">
+      <Filter>Pliki nagłówkowe\Achievements\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="AskQuestion.h">
+      <Filter>Pliki nagłówkowe\UserInterface\Implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPG.cpp">
@@ -518,14 +527,17 @@
     <ClCompile Include="Shop.cpp">
       <Filter>Pliki źródłowe\Encounters\Implementation\Shops</Filter>
     </ClCompile>
-    <ClCompile Include="IAchievementManager.h">
-      <Filter>Pliki nagłówkowe\Achievements\Abstraction</Filter>
+    <ClCompile Include="KillCountManager.cpp">
+      <Filter>Pliki źródłowe\Achievements\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="WinFormsUserInterface.cpp">
+      <Filter>Pliki źródłowe\UserInterface\Implementation</Filter>
     </ClCompile>
     <ClCompile Include="IAchievementManager.cpp">
       <Filter>Pliki źródłowe\Achievements\Abstraction</Filter>
     </ClCompile>
-    <ClCompile Include="KillCountManager.cpp">
-      <Filter>Pliki źródłowe\Achievements\Implementation</Filter>
+    <ClCompile Include="AskQuestion.cpp">
+      <Filter>Pliki źródłowe\UserInterface\Implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

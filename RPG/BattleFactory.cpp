@@ -14,6 +14,7 @@
 #include "Apple.h"
 
 #include "ConsoleUserInterface.h"
+#include "WinFormsUserInterface.h"
 
 using namespace Encounters;
 using namespace Encounters::Factories;
@@ -39,7 +40,8 @@ IBattle^ BattleFactory::create(BattleType type)
 		break;
 	}
 
-	battle->UserInterface = ConsoleUserInterface::Instance;
+	//battle->UserInterface = ConsoleUserInterface::Instance;
+	battle->UserInterface = WinFormsUserInterface::Instance;
 
 	auto random = gcnew Random();
 
